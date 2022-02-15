@@ -1,0 +1,141 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.UI;
+
+namespace LP.FDG.Units.Player
+{
+    [RequireComponent(typeof(NavMeshAgent))]
+    public class PlayerUnit : MonoBehaviour
+    {
+        private NavMeshAgent navAgent;
+
+        public BasicUnit unitType;
+
+        [HideInInspector]
+        public UnitStatTypes.Base baseStats;
+
+        public UnitStatDisplay statDisplay;
+
+        private Collider[] rangeColliders;
+
+        private Transform aggroTarget;
+
+        private UnitStatDisplay aggroUnit;
+
+        private bool hasAggro = false;
+
+        private float distance;
+
+        public float atkCooldown;
+
+        private bool checkClick = false;
+
+        private void Start()
+        {
+            baseStats = unitType.baseStats;
+            statDisplay.SetStatDisplayBasicUnit(baseStats, true);
+            navAgent = GetComponent<NavMeshAgent>();
+        }
+
+        private void Update()
+        {
+            atkCooldown -= Time.deltaTime;
+            StartCoroutine(AttackAgainFucker());
+
+            if (!hasAggro)
+            {
+                CheckForEnemyTargets();
+            }
+            else
+            {  
+                    if (!checkClick)
+                    {
+                        Attack();
+                        MoveToAggroTarget();
+                        //Debug.Log("utočime a");
+                    }
+            }
+        }
+
+        public void MoveUnit(Vector3 destination)
+        {
+            if (navAgent == null)
+            {
+                navAgent = GetComponent<NavMeshAgent>();
+                navAgent.SetDestination(destination);
+                checkClick = true;
+            }
+            else
+            {
+                navAgent.SetDestination(destination);
+                checkClick = true;
+            }
+            
+            
+        }
+        
+
+        private void CheckForEnemyTargets()
+        {
+            rangeColliders = Physics.OverlapSphere(transform.position, baseStats.aggroRange, UnitHandler.instance.eUnitLayer);
+            // rangeColliders = Physics.OverlapSphere(transform.position, baseStats.aggroRange, UnitHandler.instance.eUnitLayer);
+
+            for (int i = 0; i < rangeColliders.Length;)
+            {
+                aggroTarget = rangeColliders[i].gameObject.transform;
+                aggroUnit = aggroTarget.gameObject.GetComponentInChildren<UnitStatDisplay>();
+                // vytvořit skript pro Enumíka s  aggroUnit = aggroTarget.gameObject.GetComponentInChildren<EnemyUnitStatDisplay>();
+                hasAggro = true;
+                break;
+            }
+        }
+
+        private void Attack()
+        {
+            if (!checkClick)
+            {
+                if (atkCooldown <= 0 && distance <= baseStats.atkRange + 1)
+                {
+                    aggroUnit.TakeDamage(baseStats.attack);
+                    atkCooldown = baseStats.atkSpeed;
+                }
+            }            
+        }
+
+        private void MoveToAggroTarget()
+        {
+            if (!checkClick)
+            {
+                if (aggroTarget == null)
+                {
+                    navAgent.SetDestination(transform.position);
+                    hasAggro = false;
+                }
+                else
+                {
+                    distance = Vector3.Distance(aggroTarget.position, transform.position);
+                    navAgent.stoppingDistance = (baseStats.atkRange + 1);
+
+                    if (distance <= baseStats.aggroRange)
+                    {
+                        navAgent.SetDestination(aggroTarget.position);
+                    }
+                }
+            }
+            
+        }
+
+        private IEnumerator AttackAgainFucker()
+        {
+            if(checkClick)
+            {
+                yield return new WaitForSeconds(5f);// yield return new WaitForSeconds(x = delka toho resetu cooldanu pro utok)
+                checkClick = false;
+            }
+        }
+    }
+}
+
