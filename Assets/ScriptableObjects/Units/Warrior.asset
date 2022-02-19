@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Warrior
   m_EditorClassIdentifier: 
   type: 1
-  name: 
+  name: warrior
   humanPrefab: {fileID: 9155531265201479759, guid: ca8a574161260394188b9564853aafa7,
     type: 3}
   infectedPrefab: {fileID: 5701738939726210844, guid: 8298f1806f3d6dd4fa4e99664aea1e59,

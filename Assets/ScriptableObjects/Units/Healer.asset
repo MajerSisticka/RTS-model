@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Healer
   m_EditorClassIdentifier: 
   type: 2
-  name: 
+  name: healer
   humanPrefab: {fileID: 9155531265201479759, guid: 69d7f913ff8242342ac57d386ffd9fb2,
     type: 3}
   infectedPrefab: {fileID: 5701738939726210844, guid: 88edb5efd3a8a914db0ce21212d784a3,

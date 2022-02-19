@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Worker
   m_EditorClassIdentifier: 
   type: 0
-  name: 
+  name: worker
   humanPrefab: {fileID: 9155531265201479759, guid: 368714ba33c02444ba7a3cf7478a4e9a,
     type: 3}
   infectedPrefab: {fileID: 5701738939726210844, guid: 2232f94132b9b764a8e3e64e3e150c4e,

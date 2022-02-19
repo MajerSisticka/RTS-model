@@ -32,18 +32,22 @@ namespace LP.FDG.UI.HUD
 
             if (actions.basicUnits.Count > 0)
             {
-                foreach(Units.BasicUnit unit in actions.basicUnits)
+                
+                foreach (Units.BasicUnit unit in actions.basicUnits)
                 {
+                    
                     Button btn = Instantiate(actionButton, layoutGroup);
                     btn.name = unit.name;
                     GameObject icon = Instantiate(unit.icon, btn.transform);
                     //add text etc?...
-                    buttons.Add(btn);
+                    buttons.Add(btn);                   
+                    
                 }
             }
 
             if (actions.basicBuildings.Count > 0)
             {
+                
                 foreach(Buildings.BasicBuilding building in actions.basicBuildings)
                 {
                     Button btn = Instantiate(actionButton, layoutGroup);
@@ -51,6 +55,7 @@ namespace LP.FDG.UI.HUD
                     GameObject icon = Instantiate(building.icon, btn.transform);
                     //add text etc?...
                     buttons.Add(btn);
+                    
                 }
             }
         }

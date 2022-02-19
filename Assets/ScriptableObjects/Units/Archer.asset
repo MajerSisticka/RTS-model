@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Archer
   m_EditorClassIdentifier: 
   type: 3
-  name: 
+  name: archer
   humanPrefab: {fileID: 9155531265201479759, guid: df81458d40e08b74bb2a16ecca799f1e,
     type: 3}
   infectedPrefab: {fileID: 5701738939726210844, guid: 6459828e5abdc5144bca6a05157132d9,
