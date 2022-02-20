@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11aecf6d59dba44fafb54c3bf1be6d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingType: {fileID: 11400000, guid: 775cad10a694db84c87944a696c3b03e, type: 2}
+  buildingType: {fileID: 11400000, guid: a19de1c609ac523478c548c6dac48f3c, type: 2}
   baseStats:
     health: 0
     armor: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteracting: 0
   highlight: {fileID: 5692211269267658451}
-  actions: {fileID: 11400000, guid: a8c83993ebf1ded4aa2ca702699dcf7b, type: 2}
+  actions: {fileID: 11400000, guid: 6b4c09345ddbda24b928e5809b5df939, type: 2}
   spawnMarker: {fileID: 3187458770336261213}
   spawnMarkerGraphics: {fileID: 649236097868402372}
   maxMarkerDistance: 10

@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e85641f517646747a8da0519dd8bde3, type: 3}
-  m_Name: BarraksPlayerActions
+  m_Name: BasecampsPlayerActions
   m_EditorClassIdentifier: 
   basicUnits:
-  - {fileID: 11400000, guid: f9804863b6e17f04f8085f3df1a2e86b, type: 2}
-  - {fileID: 11400000, guid: bc243034f60d3ba44b22b3acccbeb7a4, type: 2}
-  - {fileID: 11400000, guid: c208fa18901d2ea4394b75057e144e95, type: 2}
+  - {fileID: 11400000, guid: 89351fe0225010b4b9deb6698dab938c, type: 2}
   basicBuildings: []

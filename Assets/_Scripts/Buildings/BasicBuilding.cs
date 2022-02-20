@@ -7,7 +7,9 @@ namespace LP.FDG.Buildings
     {
         public enum buildingType
         {
-            Barracks
+            Barracks,
+            Basecamps,
+            Buildings
         }
 
         [Space(15)]

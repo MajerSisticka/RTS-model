@@ -7,7 +7,7 @@ namespace LP.FDG.Buildings
         public static BuildingHandler instance;
 
         [SerializeField]
-        private BasicBuilding barraks;
+        private BasicBuilding barraks,basecamps,buildings;
 
         private void Awake()
         {
@@ -21,6 +21,12 @@ namespace LP.FDG.Buildings
             {
                 case "barrak":
                     building = barraks;
+                    break;
+                case "basecamp":
+                    building = basecamps;
+                    break;
+                case "building":
+                    building = buildings;
                     break;
                 default:
                     Debug.Log($"Unit Type: {type} could not be found or does not exist!");
