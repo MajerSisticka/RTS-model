@@ -53,7 +53,7 @@ public class MenuController : MonoBehaviour
     public IEnumerator ConfirmationBox()
     {
         comfimationPrompt.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0);
         comfimationPrompt.SetActive(false);
     }
 
