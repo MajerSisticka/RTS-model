@@ -12,6 +12,19 @@ public class MenuController : MonoBehaviour
     private TMP_Text volumeTextValue = null;
     [SerializeField]
     private Slider volumeSlider = null;
+    [SerializeField]
+    private float defaultVolume = 1.0f;
+    [Header("Gameplay Settings")]
+    [SerializeField]
+    private TMP_Text ControllerSenTextValue = null;
+    [SerializeField]
+    private Slider ControllerSenSlider = null;
+    [SerializeField]
+    private int defaultSen = 4;
+    public int mainControllerollerSen = 4;
+    [Header("Toggle Settings")]
+    [SerializeField]
+    private Toggle invertYToggle = null;
     [Header("Comfirmation")]
     [SerializeField]
     private GameObject comfimationPrompt = null;
@@ -50,16 +63,34 @@ public class MenuController : MonoBehaviour
         PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
         StartCoroutine(ConfirmationBox());
     }
+    public void SetContorollerSen(float senzitivity)
+    {
+        mainControllerollerSen = Mathf.RoundToInt(senzitivity);
+    }
+    public void GameplayApply()
+    {
+        if (invertYToggle.isOn)
+        {
+            PlayerPrefs.SetInt("masterInvertY", 1);
+            //invertYToggle y
+        }
+        else
+        {
+            PlayerPrefs.SetInt("masterInvertY", 0);
+            //invertYToggle x
+        }
+    }
+    public void ResetButton(string MenuType)
+    {
+        AudioListener.volume = defaultVolume;
+        volumeSlider.value = defaultVolume;
+        volumeTextValue.text = defaultVolume.ToString("0.0");
+        VolumeApply();
+    }
     public IEnumerator ConfirmationBox()
     {
         comfimationPrompt.SetActive(true);
         yield return new WaitForSeconds(0);
         comfimationPrompt.SetActive(false);
     }
-
-
-
-
-
-
 }
