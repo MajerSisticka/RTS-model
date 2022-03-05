@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.5566038, g: 0.35444108, b: 0.35444108, a: 0.4117647}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -565,6 +565,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a1a55557fde50418704a2281df9da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  menuController: {fileID: 1569092369}
+  volumeTextValue: {fileID: 1909519381}
+  VolumeSlider: {fileID: 789141421}
+  brightnessSlider: {fileID: 2025013416}
+  brightnessTextValue: {fileID: 74212497}
+  qualityDropDown: {fileID: 1151340338}
+  fullScreenToggle: {fileID: 404723551}
+  controllerSenTextValue: {fileID: 1378526041}
+  controllerSanSlider: {fileID: 1813146861}
+  invertYToggle: {fileID: 143763679}
 --- !u!4 &52621996
 Transform:
   m_ObjectHideFlags: 0
