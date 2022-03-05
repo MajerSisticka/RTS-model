@@ -25,6 +25,18 @@ public class MenuController : MonoBehaviour
     [Header("Toggle Settings")]
     [SerializeField]
     private Toggle invertYToggle = null;
+    [Header("Graphics Settings")]
+    [SerializeField]
+    private Slider brightnessSlider = null;
+    [SerializeField]
+    private TMP_Text brightnessTextValue = null;
+    [SerializeField]
+    private float defaultbrightness = 1;
+
+    private int _qualityLevel;
+    private bool _isFullScreen;
+    private float _defaultBrightness = 1;
+    private float _BrightnessLevel;
     [Header("Comfirmation")]
     [SerializeField]
     private GameObject comfimationPrompt = null;
@@ -79,13 +91,51 @@ public class MenuController : MonoBehaviour
             PlayerPrefs.SetInt("masterInvertY", 0);
             //invertYToggle x
         }
+        PlayerPrefs.SetFloat("masterSen", mainControllerollerSen);
+        StartCoroutine(ConfirmationBox());
     }
+
+    public void SetBrightness(float brightness)
+    {
+       _BrightnessLevel = brightness;
+        brightnessTextValue.text = brightness.ToString("0.0"); 
+    }
+    public void SetFullscreen(bool isfullscreen)
+    {
+        _isFullScreen = isfullscreen;
+    }
+    public void SetQuality(int  qualityIndex)
+    {
+        _qualityLevel = qualityIndex;
+    }
+    public void GraphicsApply()
+    {
+        PlayerPrefs.SetFloat("masterBrightness", _BrightnessLevel);
+        PlayerPrefs.SetInt("masterQuality", _qualityLevel);
+        QualitySettings.SetQualityLevel(_qualityLevel);
+        PlayerPrefs.SetInt("masterFullscreen", (_isFullScreen ? 1 : 0));
+        Screen.fullScreen = _isFullScreen;
+        StartCoroutine(ConfirmationBox());
+
+    }
+
     public void ResetButton(string MenuType)
     {
-        AudioListener.volume = defaultVolume;
-        volumeSlider.value = defaultVolume;
-        volumeTextValue.text = defaultVolume.ToString("0.0");
-        VolumeApply();
+        if (MenuType == "Audio")
+        {
+            AudioListener.volume = defaultVolume;
+            volumeSlider.value = defaultVolume;
+            volumeTextValue.text = defaultVolume.ToString("0.0");
+            VolumeApply();
+        }
+        if (MenuType == "Gameplay")
+        {
+            ControllerSenTextValue.text = defaultSen.ToString("0");
+            ControllerSenSlider.value = defaultSen;
+            invertYToggle.isOn = false;
+            GameplayApply();
+        }
+        
     }
     public IEnumerator ConfirmationBox()
     {

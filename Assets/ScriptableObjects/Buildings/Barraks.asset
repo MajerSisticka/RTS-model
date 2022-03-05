@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Barraks
   m_EditorClassIdentifier: 
   type: 0
-  name: 
+  name: barrack
   buildingPrefab: {fileID: 1162661155161502170, guid: 670de97e2a8e51649941f6a5467ad7b6,
     type: 3}
   icon: {fileID: 1725642304771962204, guid: 4cafe11094a6c62478e6bda127a2d669, type: 3}

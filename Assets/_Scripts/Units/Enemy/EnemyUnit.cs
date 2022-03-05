@@ -71,6 +71,7 @@ namespace LP.FDG.Units.Enemy
         {
             if(atkCooldown <= 0 && distance <= baseStats.atkRange + 1)
             {
+
                 aggroUnit.TakeDamage(baseStats.attack);
                 atkCooldown = baseStats.atkSpeed;
             }
