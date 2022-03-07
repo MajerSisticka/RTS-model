@@ -13,21 +13,24 @@ namespace LP.FDG.Buildings.build
 
             if (Input.GetMouseButtonDown(0))
             {
-                Vector3 mouseWorldPosition = GetMouseWorldPosition();
+                Vector3 mouseWorldPosition = GetMouseWorldPositionRZ();
+                //Vector3 mouseWorldPositionX = GetMouseWorldPositionRX;
+                //Vector3 mouseWorldPositionZ = GetMouseWorldPositionRZ;
+
                 Instantiate(activeBuildingType.buildingPrefab, mouseWorldPosition, Quaternion.identity);
             }
         }
 
-        public static Vector3 GetMouseWorldPosition()
+        public static Vector3 GetMouseWorldPositionRZ()
         {
             Vector3 vectorZ = GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
             vectorZ.z = 0f;
             return (vectorZ);
-            Vector3 vectorY = GetMouseWorldPositionWithY(Input.mousePosition, Camera.main);
-            vectorY.y = -25f;
-            return (vectorY);
+        }
+        public static Vector3 GetMouseWorldPositionRX()
+        {
             Vector3 vectorX = GetMouseWorldPositionWithX(Input.mousePosition, Camera.main);
-            vectorX.x = -5f;
+            vectorX.x = 0f;
             return (vectorX);
         }
         public static Vector3 GetMouseWorldPositionWithZ()
