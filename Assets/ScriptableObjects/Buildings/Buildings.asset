@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Buildings
   m_EditorClassIdentifier: 
   type: 2
+  sprite: {fileID: 21300000, guid: 0b13fa9374806174c87852773b87ba73, type: 3}
   name: buildings
   buildingPrefab: {fileID: 7332418654490492535, guid: 9aebe3dfa99a686419f753b1fe2433aa,
     type: 3}

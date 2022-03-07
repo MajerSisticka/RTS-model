@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Basecamps
   m_EditorClassIdentifier: 
   type: 1
+  sprite: {fileID: 21300000, guid: 3ddbf086047e42541860c13c5980e43f, type: 3}
   name: basecamp
   buildingPrefab: {fileID: 2905980576545375264, guid: 3813402aca9d9ed41bf4b5fb51bd5b38,
     type: 3}

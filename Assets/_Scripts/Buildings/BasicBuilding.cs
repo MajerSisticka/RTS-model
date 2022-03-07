@@ -16,6 +16,7 @@ namespace LP.FDG.Buildings
         [Header("Building Settings")]
 
         public buildingType type;
+        public Sprite sprite;
         public new string name;
         public GameObject buildingPrefab;
         public GameObject icon;
