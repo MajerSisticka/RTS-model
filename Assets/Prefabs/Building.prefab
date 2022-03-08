@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 1968695776958152839}
   - component: {fileID: 1075803404892480897}
   - component: {fileID: 5683031586143941665}
+  - component: {fileID: 571923458077556405}
   m_Layer: 0
   m_Name: Building
   m_TagString: Untagged
@@ -499,3 +500,16 @@ MonoBehaviour:
   spawnMarker: {fileID: 3187458770336261213}
   spawnMarkerGraphics: {fileID: 649236097868402372}
   maxMarkerDistance: 10
+--- !u!65 &571923458077556405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7332418654490492535}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 1, z: 1.2}
+  m_Center: {x: 0, y: 0, z: 0}
