@@ -1915,7 +1915,6 @@ GameObject:
   - component: {fileID: 1994260845}
   - component: {fileID: 1994260844}
   - component: {fileID: 1994260843}
-  - component: {fileID: 1994260847}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -2000,17 +1999,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!154 &1994260847
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994260842}
-  m_Material: {fileID: 0}
-  m_Enabled: 1
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
 --- !u!1 &2060050630
 GameObject:
   m_ObjectHideFlags: 0
