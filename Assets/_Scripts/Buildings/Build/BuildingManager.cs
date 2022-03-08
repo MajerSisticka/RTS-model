@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LP.FDG.Buildings;
+using UnityEngine.EventSystems;
 namespace LP.FDG.Buildings.build
 {
     public class BuildingManager : MonoBehaviour
@@ -11,7 +12,7 @@ namespace LP.FDG.Buildings.build
         private void Update()
         {
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 Vector3 mouseWorldPosition = GetMouseWorldPositionRZ();
                 //Vector3 mouseWorldPositionX = GetMouseWorldPositionRX;
@@ -20,10 +21,20 @@ namespace LP.FDG.Buildings.build
                 Instantiate(activeBuildingType.buildingPrefab, mouseWorldPosition, Quaternion.identity);
             }
         }
-        public void SetActiveBuildingType(BasicBuilding buildingType)
+        public void SetactiveBasicbuildings(BasicBuilding buildtype)
+        {
+            activeBuildingType = buildtype;
+        }
+        public BasicBuilding getActiveBasicBuilding()
+        {
+            return activeBuildingType;
+        }
+
+        /// metody na zjištìní polohy myši
+        /*public void SetActiveBuildingType(BasicBuilding buildingType)
         {
             activeBuildingType = buildingType;
-        }
+        }*/
 
         public static Vector3 GetMouseWorldPositionRZ()
         {

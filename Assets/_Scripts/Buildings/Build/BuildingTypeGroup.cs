@@ -13,10 +13,17 @@ namespace LP.FDG.Buildings.build
         [SerializeField]
         private BuildingManager buildingManager;
 
+        private Dictionary<BasicBuilding, Transform> buildButtonDic;
+
+        private void Start()
+        {
+            visualSelect();
+        }
         private void Awake()
         {
-            Transform BuildingButtonTemplate = transform.Find("BuildingButtonTemplate");
+            Transform BuildingButtonTemplate = transform.Find("buildingButtonTemplate");
             BuildingButtonTemplate.gameObject.SetActive(false);
+            buildButtonDic = new Dictionary<BasicBuilding, Transform>();
             int I = 0;
             foreach (BasicBuilding buildingType in buildingTypeList)
             {
@@ -28,11 +35,23 @@ namespace LP.FDG.Buildings.build
                 // pøidávání obrázku do buttonnu nutné pøidat do scriptible objetù Sprite Obrázky !!!!
                 buildingButtonTransform.GetComponent<Button>().onClick.AddListener(() => 
                 {
-                    buildingManager.SetActiveBuildingType(buildingType);
+                    buildingManager.SetactiveBasicbuildings(buildingType);
+                    visualSelect();
                 });
+                buildButtonDic[buildingType] = buildingButtonTransform;
                 I++;
             }
             
+        }
+        private void visualSelect()
+        {
+            foreach (BasicBuilding buildingType in buildButtonDic.Keys)
+            {
+                buildButtonDic[buildingType].Find("selected").gameObject.SetActive(false);
+            }
+            BasicBuilding activeBuildingType = buildingManager.getActiveBasicBuilding();
+            buildButtonDic[activeBuildingType].Find("selected").gameObject.SetActive(true);
+
         }
     }
 }
