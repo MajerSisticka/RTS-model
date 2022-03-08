@@ -20,6 +20,10 @@ namespace LP.FDG.Buildings.build
                 Instantiate(activeBuildingType.buildingPrefab, mouseWorldPosition, Quaternion.identity);
             }
         }
+        public void SetActiveBuildingType(BasicBuilding buildingType)
+        {
+            activeBuildingType = buildingType;
+        }
 
         public static Vector3 GetMouseWorldPositionRZ()
         {

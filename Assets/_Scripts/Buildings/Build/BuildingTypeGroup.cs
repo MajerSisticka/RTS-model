@@ -10,6 +10,8 @@ namespace LP.FDG.Buildings.build
     {
         [SerializeField]
         private List<BasicBuilding> buildingTypeList;
+        [SerializeField]
+        private BuildingManager buildingManager;
 
         private void Awake()
         {
@@ -22,8 +24,12 @@ namespace LP.FDG.Buildings.build
                 buildingButtonTransform.gameObject.SetActive(true);
                 buildingButtonTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2(I * 60, 0);
                 //buildingButtonTransform.Find("image").GetComponent<Image>().sprite = BasicBuilding.sprite;
+                
                 // pøidávání obrázku do buttonnu nutné pøidat do scriptible objetù Sprite Obrázky !!!!
-                buildingButtonTransform.GetComponent<Button>().onClick.AddListener(() => { });
+                buildingButtonTransform.GetComponent<Button>().onClick.AddListener(() => 
+                {
+                    buildingManager.SetActiveBuildingType(buildingType);
+                });
                 I++;
             }
             
