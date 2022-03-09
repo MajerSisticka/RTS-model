@@ -7,19 +7,77 @@ namespace LP.FDG.Buildings.build
 {
     public class BuildingManager : MonoBehaviour
     {
-        [SerializeField]
-        private BasicBuilding activeBuildingType;
+        [SerializeField] private BasicBuilding activeBuildingType;
+        private Camera cam = null;
+        //public Camera camera;
+        //public bool a = false;
+        private void Start()
+        {
+            cam = Camera.main;
+        }
         private void Update()
         {
 
+            Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            RaycastHit raycastHit;
+
+            if (Physics.Raycast(mouse, Vector3.down, out raycastHit))
+            {
+                Debug.DrawRay(mouse, Vector3.down * raycastHit.distance, Color.yellow);
+                Debug.Log(raycastHit.point); // pozice kde reycast hitnul zem
+            }
+
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
+
+                //RaycastHit hit = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), Mathf.Infinity, 1);
+                
+               //Ray ray =  cam.ScreenPointToRay();
+               Vector3 mouseWorldPosition =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
+               Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
+                /*
+                Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                Physics.Raycast(ray, out hit);
+                Debug.Log(ray);
+                Debug.Log(hit);
                 Vector3 mouseWorldPosition = GetMouseWorldPositionRZ();
+                if (Physics.Raycast(ray, out hit))
+                {
+                    activeBuildingType.buildingPrefab.transform.position = hit.point;
+                }
+
+                
+                if (a)
+                {
+                    if (Boolspawnbuilding(activeBuildingType, mouseWorldPosition))
+                    {
+                        Instantiate(activeBuildingType.buildingPrefab, mouseWorldPosition, Quaternion.identity);
+                    }
+                }
+                
                 //Vector3 mouseWorldPositionX = GetMouseWorldPositionRX;
                 //Vector3 mouseWorldPositionZ = GetMouseWorldPositionRZ;
 
-                Instantiate(activeBuildingType.buildingPrefab, mouseWorldPosition, Quaternion.identity);
+                //stavìní budovy
+
+                */
+
+
             }
+        }
+        private void SpawnAtMousePosition()
+        {
+            Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            RaycastHit raycastHit;
+
+            if (Physics.Raycast(mouse, Vector3.down, out raycastHit))
+            {
+                Debug.DrawRay(mouse, Vector3.down * raycastHit.distance, Color.yellow);
+                Debug.Log(raycastHit.point); // pozice kde reycast hitnul zem
+            }           
         }
         public void SetactiveBasicbuildings(BasicBuilding buildtype)
         {
@@ -29,12 +87,27 @@ namespace LP.FDG.Buildings.build
         {
             return activeBuildingType;
         }
-
+        private bool Boolspawnbuilding(BasicBuilding basicBuilding,Vector3 position)
+        {
+            BoxCollider buildingBoxcollier = basicBuilding.buildingPrefab.GetComponent<BoxCollider>();
+            /* if(Physics.OverlapBox(position + (Vector3)buildingBoxcollier,buildingBoxcollier.size, 0) != null)
+             {
+                 return false;
+             }
+             else
+             {
+                 return true;
+             }*/
+            return false;
+        }
         /// metody na zjištìní polohy myši
         /*public void SetActiveBuildingType(BasicBuilding buildingType)
         {
             activeBuildingType = buildingType;
         }*/
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////
 
         public static Vector3 GetMouseWorldPositionRZ()
         {
