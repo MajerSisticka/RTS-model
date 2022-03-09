@@ -981,6 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeBuildingType: {fileID: 11400000, guid: 775cad10a694db84c87944a696c3b03e, type: 2}
+  prefab: {fileID: 6377466462395312918, guid: e1ce5338b866c914ab0452043a3a1939, type: 3}
 --- !u!1 &915380621
 GameObject:
   m_ObjectHideFlags: 0

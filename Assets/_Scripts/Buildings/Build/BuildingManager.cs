@@ -8,6 +8,8 @@ namespace LP.FDG.Buildings.build
     public class BuildingManager : MonoBehaviour
     {
         [SerializeField] private BasicBuilding activeBuildingType;
+        [SerializeField] private  GameObject prefab;
+        //[SerializeField] private List<GameObject> prefabs;
         private Camera cam = null;
         //public Camera camera;
         //public bool a = false;
@@ -30,12 +32,24 @@ namespace LP.FDG.Buildings.build
 
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
+                if (Physics.Raycast(mouse, Vector3.down, out raycastHit))
+                {
+                    if (raycastHit.collider.gameObject.layer != 1)
+                    {
+                        Instantiate(prefab, raycastHit.point, Quaternion.identity);
+                    }    
+                }
+
 
                 //RaycastHit hit = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), Mathf.Infinity, 1);
-                
-               //Ray ray =  cam.ScreenPointToRay();
-               Vector3 mouseWorldPosition =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
-               Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
+
+                //Ray ray =  cam.ScreenPointToRay();
+                Vector3 mouseWorldPosition =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                // toto
+               //Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
+                //Instantiate(prefab, raycastHit.point, Quaternion.identity);
+
+
                 /*
                 Ray ray = camera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
