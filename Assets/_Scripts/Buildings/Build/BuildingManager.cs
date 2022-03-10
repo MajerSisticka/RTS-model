@@ -26,8 +26,9 @@ namespace LP.FDG.Buildings.build
 
             if (Physics.Raycast(mouse, Vector3.down, out raycastHit))
             {
-                Debug.DrawRay(mouse, Vector3.down * raycastHit.distance, Color.yellow);
-                Debug.Log(raycastHit.point); // pozice kde reycast hitnul zem
+                //Debug.DrawRay(mouse, Vector3.down * raycastHit.distance, Color.yellow);
+                //pozice myši
+                //Debug.Log(raycastHit.point); // pozice kde reycast hitnul zem
             }
 
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
@@ -36,7 +37,11 @@ namespace LP.FDG.Buildings.build
                 {
                     if (raycastHit.collider.gameObject.layer != 1)
                     {
-                        Instantiate(prefab, raycastHit.point, Quaternion.identity);
+                        // jeden typ budovy
+                        //Instantiate(prefab, raycastHit.point, Quaternion.identity);
+                        // všechny typy
+                        Debug.Log("stavíme budovu" + activeBuildingType.buildingPrefab);
+                        Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
                     }    
                 }
 
@@ -115,10 +120,10 @@ namespace LP.FDG.Buildings.build
             return false;
         }
         /// metody na zjištìní polohy myši
-        /*public void SetActiveBuildingType(BasicBuilding buildingType)
+        public void SetActiveBuildingType(BasicBuilding buildingType)
         {
             activeBuildingType = buildingType;
-        }*/
+        }
 
 
         ////////////////////////////////////////////////////////////////////////////////////////

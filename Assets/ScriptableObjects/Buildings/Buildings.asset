@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 2
   sprite: {fileID: 21300000, guid: 0b13fa9374806174c87852773b87ba73, type: 3}
   name: buildings
-  buildingPrefab: {fileID: 7332418654490492535, guid: 9aebe3dfa99a686419f753b1fe2433aa,
+  buildingPrefab: {fileID: 5861303771114868299, guid: b0e379ff77bf3514ab77f493a4cd4a14,
     type: 3}
   icon: {fileID: 1725642304771962204, guid: 4cafe11094a6c62478e6bda127a2d669, type: 3}
   spawnTime: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 1
   sprite: {fileID: 21300000, guid: 3ddbf086047e42541860c13c5980e43f, type: 3}
   name: basecamp
-  buildingPrefab: {fileID: 2905980576545375264, guid: 3813402aca9d9ed41bf4b5fb51bd5b38,
+  buildingPrefab: {fileID: 2085573157296850186, guid: 69273561763a70e4dacb93b2e8af61a5,
     type: 3}
   icon: {fileID: 1725642304771962204, guid: 4cafe11094a6c62478e6bda127a2d669, type: 3}
   spawnTime: 0

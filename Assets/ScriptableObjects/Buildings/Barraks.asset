@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 0
   sprite: {fileID: 21300000, guid: 1f1f594481f7db94b977087f6707434c, type: 3}
   name: barrack
-  buildingPrefab: {fileID: 1162661155161502170, guid: 670de97e2a8e51649941f6a5467ad7b6,
+  buildingPrefab: {fileID: 6377466462395312918, guid: e1ce5338b866c914ab0452043a3a1939,
     type: 3}
   icon: {fileID: 1725642304771962204, guid: 4cafe11094a6c62478e6bda127a2d669, type: 3}
   spawnTime: 0

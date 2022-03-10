@@ -980,8 +980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f48071b3bac8a448ac1cd11afc3401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeBuildingType: {fileID: 11400000, guid: 775cad10a694db84c87944a696c3b03e, type: 2}
-  prefab: {fileID: 6377466462395312918, guid: e1ce5338b866c914ab0452043a3a1939, type: 3}
+  activeBuildingType: {fileID: 11400000, guid: a19de1c609ac523478c548c6dac48f3c, type: 2}
+  prefab: {fileID: 7332418654490492535, guid: 9aebe3dfa99a686419f753b1fe2433aa, type: 3}
 --- !u!1 &915380621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,7 +1659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350672772}
   m_Layer: 0
-  m_Name: BaseCamps
+  m_Name: Basecamps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
