@@ -2,17 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InreactablesWorker : MonoBehaviour
+namespace LP.FDG.Interactables.Worker
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public class InreactablesWorker : MonoBehaviour
+    {       
+        public GameObject BuildingManager = null;
+        public GameObject BuildingTypeSelectUI = null;
+        public virtual void Awake()
+        {
+            BuildingManager.SetActive(false);
+            BuildingTypeSelectUI.SetActive(false);            
+        }
+        public virtual void OnInteractEnter()
+        {
+            ShowUIMenu();
+            //isInteracting = true;
+        }
+        public virtual void OnInteractExit()
+        {
+            HideUIMenu();
+            //isInteracting = false;
+        }
+        public virtual void ShowUIMenu()
+        {
+            BuildingManager.SetActive(true);
+            BuildingTypeSelectUI.SetActive(true);
+            //highlight.SetActive(true);
+        }
+        public virtual void HideUIMenu()
+        {
+            BuildingManager.SetActive(false);
+            BuildingTypeSelectUI.SetActive(false);
+            //highlight.SetActive(false);
+        }
     }
 }

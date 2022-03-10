@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IWorker : MonoBehaviour
+namespace LP.FDG.Interactables.Worker
 {
-    // Start is called before the first frame update
-    void Start()
+    public class IWorker : InreactablesWorker
     {
-        
-    }
+        public override void OnInteractEnter()
+        {
+            base.OnInteractEnter();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void OnInteractExit()
+        {
+            base.OnInteractExit();
+        }
     }
 }
