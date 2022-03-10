@@ -35,7 +35,7 @@ namespace LP.FDG.Buildings.build
             {
                 if (Physics.Raycast(mouse, Vector3.down, out raycastHit))
                 {
-                    if (raycastHit.collider.gameObject.layer != 1)
+                    if (raycastHit.collider.gameObject.layer !< 1)
                     {
                         // jeden typ budovy
                         //Instantiate(prefab, raycastHit.point, Quaternion.identity);

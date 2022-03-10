@@ -385,7 +385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &477170025
 RectTransform:
   m_ObjectHideFlags: 0
@@ -403,10 +403,10 @@ RectTransform:
   m_Father: {fileID: 1799431553}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 42.00004, y: -36.00002}
+  m_SizeDelta: {x: 78, y: 78}
   m_Pivot: {x: 0.5000005, y: 0.49999973}
 --- !u!114 &477170026
 MonoBehaviour:
@@ -982,6 +982,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeBuildingType: {fileID: 11400000, guid: a19de1c609ac523478c548c6dac48f3c, type: 2}
   prefab: {fileID: 5861303771114868299, guid: b0e379ff77bf3514ab77f493a4cd4a14, type: 3}
+  camera: {fileID: 0}
+  a: 0
 --- !u!1 &915380621
 GameObject:
   m_ObjectHideFlags: 0
