@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3427026719168474431}
   - component: {fileID: 4119495572813804876}
   - component: {fileID: 7597579294196918489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnMarkerGraphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 1243514616797001432}
   - component: {fileID: 6941300605531838623}
   - component: {fileID: 6376032675322567694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 4776963692308598009}
   - component: {fileID: 1989711929337130447}
   - component: {fileID: 3086776350129727195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 105855846567430741}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnMarker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 1075803404892480897}
   - component: {fileID: 5683031586143941665}
   - component: {fileID: 571923458077556405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
