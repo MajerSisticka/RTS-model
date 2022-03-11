@@ -48,8 +48,8 @@ namespace LP.FDG.Buildings.build
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
 
-                        Player.PlayerBuilding basicBuilding = activeBuildingType.buildingPrefab.AddComponent<Buildings.Player.PlayerBuilding>();
-                        basicBuilding.transform.SetParent(GameObject.Find("Player " + basicBuilding.buildingType.type.ToString() + "s").transform);
+                        //Player.PlayerBuilding basicBuilding = activeBuildingType.buildingPrefab.AddComponent<Buildings.Player.PlayerBuilding>();
+                        //basicBuilding.transform.SetParent(GameObject.Find("Player " + basicBuilding.buildingType.type.ToString() + "s").transform);
 
                         //Units.Player.PlayerUnit pu = spawnedObject.GetComponent<Units.Player.PlayerUnit>();
                         //pu.transform.SetParent(GameObject.Find("Player " + pu.unitType.type.ToString() + "s").transform);
