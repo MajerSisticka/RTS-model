@@ -5,7 +5,7 @@ using LP.FDG.Buildings;
 using UnityEngine.EventSystems;
 namespace LP.FDG.Buildings.build
 {
-    public class BuildingManager : MonoBehaviour
+    public class BuildingManager : BuildingTypeGroup
     {
         [SerializeField] private BasicBuilding activeBuildingType;
         [SerializeField] private  GameObject prefab;
@@ -47,6 +47,7 @@ namespace LP.FDG.Buildings.build
                         Debug.Log("stavíme budovu" + activeBuildingType.buildingPrefab);
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
+                        DEactivatebuilding(); // zajímavý efekt kdy se vypnebudova :)
 
                         //Player.PlayerBuilding basicBuilding = activeBuildingType.buildingPrefab.AddComponent<Buildings.Player.PlayerBuilding>();
                         //basicBuilding.transform.SetParent(GameObject.Find("Player " + basicBuilding.buildingType.type.ToString() + "s").transform);

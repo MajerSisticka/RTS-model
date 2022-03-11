@@ -26,7 +26,7 @@ namespace LP.FDG.Buildings.build
         private void Awake()
         {
             //SetButtonsBuilding();
-            DEactivatebuilding();
+            //DEactivatebuilding();
         }
         private void visualSelect()
         {
