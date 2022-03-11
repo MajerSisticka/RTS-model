@@ -21,11 +21,11 @@ namespace LP.FDG.Buildings.build
 
         private void Start()
         {
-            //visualSelect();
+            visualSelect();
         }
         private void Awake()
         {
-            //SetButtonsBuilding();
+            SetButtonsBuilding();
             //DEactivatebuilding();
         }
         private void visualSelect()

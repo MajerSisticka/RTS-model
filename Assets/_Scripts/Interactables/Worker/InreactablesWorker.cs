@@ -5,7 +5,7 @@ using LP.FDG.Buildings.build;
 
 namespace LP.FDG.Interactables.Worker
 {
-    public class InreactablesWorker : BuildingTypeGroup
+    public class InreactablesWorker : MonoBehaviour
     {
         public bool isInteracting = false;
         public GameObject BuildingManager;
@@ -31,12 +31,12 @@ namespace LP.FDG.Interactables.Worker
         {
             //BuildingManager.SetActive(true);
             //BuildingTypeSelectUI.SetActive(true);
-            activatebuilding();
+            //activatebuilding();
             Debug.Log("zmaèkla si workera");
         }
         public virtual void HideUIMenu()
         {
-            DEactivatebuilding();
+            //DEactivatebuilding();
             //BuildingManager.SetActive(false);
             //BuildingTypeSelectUI.SetActive(false);
             //highlight.SetActive(false);
