@@ -7,34 +7,40 @@ namespace LP.FDG.Interactables.Worker
 {
     public class InreactablesWorker : MonoBehaviour
     {       
-        public GameObject BuildingManager = null;
-        public GameObject BuildingTypeSelectUI = null;
-        public virtual void Awake()
+        public GameObject BuildingManager;
+        public GameObject BuildingTypeSelectUI;
+        public bool active = true;
+        public virtual void Start()
         {
-           // BuildingManager.SetActive(false);
-           // BuildingTypeSelectUI.SetActive(false);            
+           Debug.Log("zmaèkla si workera");
+           BuildingManager.SetActive(false);
+           BuildingTypeSelectUI.SetActive(false);            
         }
         public virtual void OnInteractEnter()
         {
             ShowUIMenu();
-            //isInteracting = true;
+            active = true;
         }
         public virtual void OnInteractExit()
         {
             HideUIMenu();
-            //isInteracting = false;
+            active = false;
         }
         public virtual void ShowUIMenu()
         {
             BuildingManager.SetActive(true);
             BuildingTypeSelectUI.SetActive(true);
             //highlight.SetActive(true);
+            Debug.Log("zmaèkla si workera");
         }
         public virtual void HideUIMenu()
         {
             BuildingManager.SetActive(false);
             BuildingTypeSelectUI.SetActive(false);
             //highlight.SetActive(false);
+            Debug.Log("NEzmaèkla si workera");
+
+
         }
     }
 }

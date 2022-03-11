@@ -13,6 +13,10 @@ namespace LP.FDG.Buildings.build
         [SerializeField]
         private BuildingManager buildingManager;
 
+        public GameObject BuildManagerDE;
+
+        private List<Transform> buttons = new List<Transform>();
+
         private Dictionary<BasicBuilding, Transform> buildButtonDic;
 
         private void Start()
@@ -22,6 +26,8 @@ namespace LP.FDG.Buildings.build
         private void Awake()
         {
             SetButtonsBuilding();
+            //DestroyButtonsBuilding();
+            //DestroyBuildManager();
         }
         private void visualSelect()
         {
@@ -42,6 +48,7 @@ namespace LP.FDG.Buildings.build
             foreach (BasicBuilding buildingType in buildingTypeList)
             {
                 Transform buildingButtonTransform = Instantiate(BuildingButtonTemplate, transform);
+                buttons.Add(buildingButtonTransform);
                 buildingButtonTransform.gameObject.SetActive(true);
                 buildingButtonTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2(I * 60, 0);
                 //buildingButtonTransform.Find("image").GetComponent<Image>().sprite = BasicBuilding.sprite;
@@ -55,6 +62,19 @@ namespace LP.FDG.Buildings.build
                 buildButtonDic[buildingType] = buildingButtonTransform;
                 I++;
             }
+            Debug.LogWarning("pocet tlacitek " + buttons.Count);
+        }
+        private void DestroyButtonsBuilding()
+        {
+            foreach (Transform btn in buttons)
+            {
+                Destroy(btn.gameObject);
+            }
+            buttons.Clear();
+        }
+        private void DestroyBuildManager()
+        {
+            BuildManagerDE.SetActive(false);
         }
     }
 }
