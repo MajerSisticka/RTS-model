@@ -21,27 +21,7 @@ namespace LP.FDG.Buildings.build
         }
         private void Awake()
         {
-            Transform BuildingButtonTemplate = transform.Find("buildingButtonTemplate");
-            BuildingButtonTemplate.gameObject.SetActive(false);
-            buildButtonDic = new Dictionary<BasicBuilding, Transform>();
-            int I = 0;
-            foreach (BasicBuilding buildingType in buildingTypeList)
-            {
-                Transform buildingButtonTransform = Instantiate(BuildingButtonTemplate, transform);
-                buildingButtonTransform.gameObject.SetActive(true);
-                buildingButtonTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2(I * 60, 0);
-                //buildingButtonTransform.Find("image").GetComponent<Image>().sprite = BasicBuilding.sprite;
-                
-                // pøidávání obrázku do buttonnu nutné pøidat do scriptible objetù Sprite Obrázky !!!!
-                buildingButtonTransform.GetComponent<Button>().onClick.AddListener(() => 
-                {
-                    buildingManager.SetactiveBasicbuildings(buildingType);
-                    visualSelect();
-                });
-                buildButtonDic[buildingType] = buildingButtonTransform;
-                I++;
-            }
-            
+            SetButtonsBuilding();
         }
         private void visualSelect()
         {
@@ -52,6 +32,29 @@ namespace LP.FDG.Buildings.build
             BasicBuilding activeBuildingType = buildingManager.getActiveBasicBuilding();
             buildButtonDic[activeBuildingType].Find("selected").gameObject.SetActive(true);
 
+        }
+        private void SetButtonsBuilding()
+        {
+            Transform BuildingButtonTemplate = transform.Find("buildingButtonTemplate");
+            BuildingButtonTemplate.gameObject.SetActive(false);
+            buildButtonDic = new Dictionary<BasicBuilding, Transform>();
+            int I = 0;
+            foreach (BasicBuilding buildingType in buildingTypeList)
+            {
+                Transform buildingButtonTransform = Instantiate(BuildingButtonTemplate, transform);
+                buildingButtonTransform.gameObject.SetActive(true);
+                buildingButtonTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2(I * 60, 0);
+                //buildingButtonTransform.Find("image").GetComponent<Image>().sprite = BasicBuilding.sprite;
+                //buildingButtonTransform.Find("image").GetComponent<Sprite>() = Buildings.BasicBuilding.spr
+                // pøidávání obrázku do buttonnu nutné pøidat do scriptible objetù Sprite Obrázky !!!!
+                buildingButtonTransform.GetComponent<Button>().onClick.AddListener(() =>
+                {
+                    buildingManager.SetactiveBasicbuildings(buildingType);
+                    visualSelect();
+                });
+                buildButtonDic[buildingType] = buildingButtonTransform;
+                I++;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LP.FDG.Buildings.build;
 
 namespace LP.FDG.Interactables.Worker
 {
@@ -10,8 +11,8 @@ namespace LP.FDG.Interactables.Worker
         public GameObject BuildingTypeSelectUI = null;
         public virtual void Awake()
         {
-            BuildingManager.SetActive(false);
-            BuildingTypeSelectUI.SetActive(false);            
+           // BuildingManager.SetActive(false);
+           // BuildingTypeSelectUI.SetActive(false);            
         }
         public virtual void OnInteractEnter()
         {

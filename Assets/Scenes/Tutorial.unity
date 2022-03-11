@@ -348,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 403295258}
   m_Layer: 0
-  m_Name: Buildings
+  m_Name: Player Buildings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1535,7 +1535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277532058}
   m_Layer: 0
-  m_Name: Barraks
+  m_Name: Player Barracks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1662,7 +1662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350672772}
   m_Layer: 0
-  m_Name: Basecamps
+  m_Name: Player Basecamps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2080,7 +2080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948290602}
   m_Layer: 0
-  m_Name: PlayerBuildings
+  m_Name: Player Buildings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

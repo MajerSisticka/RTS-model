@@ -240,6 +240,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6377466462395312913}
+  - component: {fileID: -998563915784562458}
+  - component: {fileID: -2345626262758913720}
+  - component: {fileID: -3193532245965502369}
+  - component: {fileID: 2661760771472768896}
+  - component: {fileID: -3325268729320756828}
+  - component: {fileID: 8418002498037948098}
+  - component: {fileID: 8249598698892927245}
+  - component: {fileID: -4520479895178212706}
   m_Layer: 0
   m_Name: Barrack
   m_TagString: Untagged
@@ -262,6 +270,150 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-998563915784562458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377466462395312918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11aecf6d59dba44fafb54c3bf1be6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 0}
+  baseStats:
+    health: 0
+    armor: 0
+    attack: 0
+  statDisplay: {fileID: 0}
+--- !u!114 &-2345626262758913720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377466462395312918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11aecf6d59dba44fafb54c3bf1be6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 0}
+  baseStats:
+    health: 0
+    armor: 0
+    attack: 0
+  statDisplay: {fileID: 0}
+--- !u!114 &-3193532245965502369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377466462395312918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11aecf6d59dba44fafb54c3bf1be6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 0}
+  baseStats:
+    health: 0
+    armor: 0
+    attack: 0
+  statDisplay: {fileID: 0}
+--- !u!114 &2661760771472768896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377466462395312918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11aecf6d59dba44fafb54c3bf1be6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 0}
+  baseStats:
+    health: 0
+    armor: 0
+    attack: 0
+  statDisplay: {fileID: 0}
+--- !u!114 &-3325268729320756828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377466462395312918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11aecf6d59dba44fafb54c3bf1be6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 0}
+  baseStats:
+    health: 0
+    armor: 0
+    attack: 0
+  statDisplay: {fileID: 0}
+--- !u!114 &8418002498037948098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377466462395312918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11aecf6d59dba44fafb54c3bf1be6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 0}
+  baseStats:
+    health: 0
+    armor: 0
+    attack: 0
+  statDisplay: {fileID: 0}
+--- !u!114 &8249598698892927245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377466462395312918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11aecf6d59dba44fafb54c3bf1be6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 0}
+  baseStats:
+    health: 0
+    armor: 0
+    attack: 0
+  statDisplay: {fileID: 0}
+--- !u!114 &-4520479895178212706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377466462395312918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11aecf6d59dba44fafb54c3bf1be6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 0}
+  baseStats:
+    health: 0
+    armor: 0
+    attack: 0
+  statDisplay: {fileID: 0}
 --- !u!1 &6492851716095959977
 GameObject:
   m_ObjectHideFlags: 0

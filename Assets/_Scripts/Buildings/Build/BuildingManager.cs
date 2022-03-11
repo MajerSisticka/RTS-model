@@ -19,7 +19,11 @@ namespace LP.FDG.Buildings.build
         }
         private void Update()
         {
-
+            SpawnBuilding();
+            
+        }
+        private void SpawnBuilding()
+        {
             Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             RaycastHit raycastHit;
@@ -35,7 +39,7 @@ namespace LP.FDG.Buildings.build
             {
                 if (Physics.Raycast(mouse, Vector3.down, out raycastHit))
                 {
-                    if (raycastHit.collider.gameObject.layer !< 1)
+                    if (raycastHit.collider.gameObject.layer! < 1)
                     {
                         // jeden typ budovy
                         //Instantiate(prefab, raycastHit.point, Quaternion.identity);
@@ -43,18 +47,24 @@ namespace LP.FDG.Buildings.build
                         Debug.Log("stavíme budovu" + activeBuildingType.buildingPrefab);
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
-                    }    
+
+                        Player.PlayerBuilding basicBuilding = activeBuildingType.buildingPrefab.AddComponent<Buildings.Player.PlayerBuilding>();
+                        basicBuilding.transform.SetParent(GameObject.Find("Player " + basicBuilding.buildingType.type.ToString() + "s").transform);
+
+                        //Units.Player.PlayerUnit pu = spawnedObject.GetComponent<Units.Player.PlayerUnit>();
+                        //pu.transform.SetParent(GameObject.Find("Player " + pu.unitType.type.ToString() + "s").transform);
+                    }
                 }
 
 
-                
-                Vector3 mouseWorldPosition =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                
+
+                Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
                 if (a)
                 {
                     if (Boolspawnbuilding(activeBuildingType, mouseWorldPosition))
                     {
-                        
+
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
                         Instantiate(prefab, raycastHit.point, Quaternion.identity);
 
@@ -64,7 +74,7 @@ namespace LP.FDG.Buildings.build
                         RaycastHit hit;
                         Physics.Raycast(ray, out hit);
                         Debug.Log(ray);
-                        Debug.Log(hit);                        
+                        Debug.Log(hit);
                         if (Physics.Raycast(ray, out hit))
                         {
                             activeBuildingType.buildingPrefab.transform.position = hit.point;
@@ -74,17 +84,18 @@ namespace LP.FDG.Buildings.build
                         Instantiate(activeBuildingType.buildingPrefab, mouseWorldPosition, Quaternion.identity);
                     }
                 }
-                
+
                 //Vector3 mouseWorldPositionX = GetMouseWorldPositionRX;
                 //Vector3 mouseWorldPositionZ = GetMouseWorldPositionRZ;
 
-                
 
-                
+
+
 
 
             }
         }
+
         private void SpawnAtMousePosition()
         {
             Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
