@@ -5,11 +5,12 @@ using LP.FDG.Buildings.build;
 
 namespace LP.FDG.Interactables.Worker
 {
-    public class InreactablesWorker : MonoBehaviour
-    {       
+    public class InreactablesWorker : BuildingTypeGroup
+    {
+        public bool isInteracting = false;
         public GameObject BuildingManager;
         public GameObject BuildingTypeSelectUI;
-        public bool active = true;
+        
         public virtual void Start()
         {
            Debug.Log("zmaèkla si workera");
@@ -19,24 +20,25 @@ namespace LP.FDG.Interactables.Worker
         public virtual void OnInteractEnter()
         {
             ShowUIMenu();
-            active = true;
+            isInteracting = true;
         }
         public virtual void OnInteractExit()
         {
             HideUIMenu();
-            active = false;
+            isInteracting = false;
         }
         public virtual void ShowUIMenu()
         {
-            BuildingManager.SetActive(true);
-            BuildingTypeSelectUI.SetActive(true);
-            //highlight.SetActive(true);
+            //BuildingManager.SetActive(true);
+            //BuildingTypeSelectUI.SetActive(true);
+            activatebuilding();
             Debug.Log("zmaèkla si workera");
         }
         public virtual void HideUIMenu()
         {
-            BuildingManager.SetActive(false);
-            BuildingTypeSelectUI.SetActive(false);
+            DEactivatebuilding();
+            //BuildingManager.SetActive(false);
+            //BuildingTypeSelectUI.SetActive(false);
             //highlight.SetActive(false);
             Debug.Log("NEzmaèkla si workera");
 

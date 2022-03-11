@@ -21,13 +21,12 @@ namespace LP.FDG.Buildings.build
 
         private void Start()
         {
-            visualSelect();
+            //visualSelect();
         }
         private void Awake()
         {
-            SetButtonsBuilding();
-            //DestroyButtonsBuilding();
-            //DestroyBuildManager();
+            //SetButtonsBuilding();
+            DEactivatebuilding();
         }
         private void visualSelect()
         {
@@ -63,6 +62,16 @@ namespace LP.FDG.Buildings.build
                 I++;
             }
             Debug.LogWarning("pocet tlacitek " + buttons.Count);
+        }
+        public void DEactivatebuilding()
+        {
+            DestroyButtonsBuilding();
+            DestroyBuildManager();   
+        }
+        public void activatebuilding()
+        {
+            visualSelect();
+            SetButtonsBuilding();
         }
         private void DestroyButtonsBuilding()
         {
