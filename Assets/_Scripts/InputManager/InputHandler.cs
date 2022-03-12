@@ -179,6 +179,27 @@ namespace LP.FDG.InputManager
                 return null;
             }
         }
+        private Interactables.Worker.IWorker addedWorker (Transform tf, bool canMultiselect = false)
+        {
+            Interactables.Worker.IWorker iWorker = tf.GetComponent<Interactables.Worker.IWorker>();
+            if (iWorker)
+            {
+                if (!canMultiselect)
+                {
+                    DeselectUnits();
+                }
+
+                selectedUnits.Add(iWorker.gameObject.transform);
+
+                iWorker.OnInteractEnter();
+
+                return iWorker;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         private Interactables.IBuilding addedBuilding(Transform tf)
         {
