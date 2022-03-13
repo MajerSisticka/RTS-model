@@ -256,8 +256,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteracting: 0
   highlight: {fileID: 2014498388577341456}
-  buildingManager: {fileID: 0}
-  buildingTypeSelectUI: {fileID: 0}
+  buildingManager: {fileID: 1594368700286138315, guid: d15e9e94b82b5a64aa4f27e188409516,
+    type: 3}
+  buildingTypeSelectUI: {fileID: 5411957019212236681, guid: 9d1d6d02d0d2a854591ea2446c8c01bf,
+    type: 3}
 --- !u!1001 &6503641920482583531
 PrefabInstance:
   m_ObjectHideFlags: 0

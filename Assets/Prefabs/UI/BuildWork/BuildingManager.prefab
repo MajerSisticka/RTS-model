@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1594368700286138312
 Transform:
   m_ObjectHideFlags: 0
@@ -45,5 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeBuildingType: {fileID: 11400000, guid: a19de1c609ac523478c548c6dac48f3c, type: 2}
   prefab: {fileID: 5861303771114868299, guid: b0e379ff77bf3514ab77f493a4cd4a14, type: 3}
+  buildingmanager: {fileID: 1594368700286138315}
+  buildingTypeSelectUI: {fileID: 5411957019212236681, guid: 9d1d6d02d0d2a854591ea2446c8c01bf,
+    type: 3}
   camera: {fileID: 0}
   a: 0
