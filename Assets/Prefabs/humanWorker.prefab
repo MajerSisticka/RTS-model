@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: -7417537971794178470}
   - component: {fileID: 540530933180795516}
   - component: {fileID: 632817461992013662}
+  - component: {fileID: 8853594956841861895}
   m_Layer: 8
   m_Name: humanWorker
   m_TagString: Untagged
@@ -241,6 +242,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteracting: 0
   highlight: {fileID: 2014498388577341456}
+--- !u!114 &8853594956841861895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9155531265201479759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97c04c20afee25449efe5068bc3c3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteracting: 0
+  highlight: {fileID: 2014498388577341456}
+  buildingManager: {fileID: 0}
+  buildingTypeSelectUI: {fileID: 0}
 --- !u!1001 &6503641920482583531
 PrefabInstance:
   m_ObjectHideFlags: 0

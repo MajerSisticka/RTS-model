@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using LP.FDG.Buildings;
 using UnityEngine.EventSystems;
+using LP.FDG.Buildings.build;
 namespace LP.FDG.Buildings.build
 {
     public class BuildingManager : MonoBehaviour
     {
         [SerializeField] private BasicBuilding activeBuildingType;
         [SerializeField] private  GameObject prefab;
+        [SerializeField] private GameObject buildingmanager;
+        [SerializeField] private GameObject buildingTypeSelectUI;
         //[SerializeField] private List<GameObject> prefabs;
         private Camera cam = null;
         public Camera camera;
@@ -47,7 +50,10 @@ namespace LP.FDG.Buildings.build
                         Debug.Log("stavíme budovu" + activeBuildingType.buildingPrefab);
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
+                        buildingmanager.SetActive(false);
+                        buildingTypeSelectUI.SetActive(false);
                         
+
 
                         //Player.PlayerBuilding basicBuilding = activeBuildingType.buildingPrefab.AddComponent<Buildings.Player.PlayerBuilding>();
                         //basicBuilding.transform.SetParent(GameObject.Find("Player " + basicBuilding.buildingType.type.ToString() + "s").transform);

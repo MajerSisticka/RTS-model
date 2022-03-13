@@ -79,6 +79,16 @@ namespace LP.FDG.InputManager
                         }
                     }
                 }
+                foreach (Transform child in Player.PlayerManager.instance.playerUnits)
+                {
+                    foreach (Transform unit in child)
+                    {
+                        if (isWithinSelectionBounds(unit))
+                        {
+                            addedWorker(unit, true);
+                        }
+                    }
+                }
                 isDragging = false;
             }
 
@@ -130,8 +140,18 @@ namespace LP.FDG.InputManager
                 {
                     selectedUnits[i].gameObject.GetComponent<Interactables.IUnit>().OnInteractExit();
                 }
-                selectedUnits.Clear();
+                //selectedUnits.Clear();
             }
+            // přidáno
+            if (selectedUnits.Count > 0)
+            {
+                for (int i = 0; i < selectedUnits.Count; i++)
+                {
+                    selectedUnits[i].gameObject.GetComponent<Interactables.Worker.IWorker>().OnInteractExit();
+                }
+                
+            }
+            selectedUnits.Clear();
         }
 
         private bool isWithinSelectionBounds(Transform tf)
