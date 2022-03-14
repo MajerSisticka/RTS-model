@@ -50,9 +50,9 @@ namespace LP.FDG.Buildings.build
                         Debug.Log("stavíme budovu" + activeBuildingType.buildingPrefab);
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
-                        buildingmanager.SetActive(false);
-                        buildingTypeSelectUI.SetActive(false);
-                        
+                        //buildingmanager.SetActive(false);
+                        //buildingTypeSelectUI.SetActive(false);
+                        // yakomentovat 53 a 54
 
 
                         //Player.PlayerBuilding basicBuilding = activeBuildingType.buildingPrefab.AddComponent<Buildings.Player.PlayerBuilding>();

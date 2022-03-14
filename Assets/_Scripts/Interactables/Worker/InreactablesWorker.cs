@@ -14,9 +14,10 @@ namespace LP.FDG.Interactables.Worker
         public virtual void Awake()
         {
             highlight.SetActive(false);
-            buildingManager.SetActive(false);
-            buildingTypeSelectUI.SetActive(false);
-            
+            //buildingManager.SetActive(false);
+            //buildingTypeSelectUI.SetActive(false);
+            buildingManager = GameObject.Find("/BuildingManager");
+            buildingTypeSelectUI = GameObject.Find("BuildingTypeSelectUI");
         }
         public virtual void OnInteractEnter()
         {
@@ -34,8 +35,8 @@ namespace LP.FDG.Interactables.Worker
         public virtual void ShowHighlight()
         {
             Debug.LogWarning("Show");
-            buildingManager.SetActive(true);
-            buildingTypeSelectUI.SetActive(true);
+            //buildingManager.SetActive(true);
+            //buildingTypeSelectUI.SetActive(true);
             highlight.SetActive(true);
             //activatebuilding();
             isInteracting = true;
