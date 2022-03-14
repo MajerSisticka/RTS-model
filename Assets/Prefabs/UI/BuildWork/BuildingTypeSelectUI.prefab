@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 5411957019212236682}
   - component: {fileID: 5411957019212236683}
   - component: {fileID: 5411957019212236684}
+  - component: {fileID: 7617420084350747201}
   m_Layer: 5
   m_Name: BuildingTypeSelectUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5411957019212236680
 RectTransform:
   m_ObjectHideFlags: 0
@@ -109,7 +110,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5411957019212236681}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aafd47c03e7937443baa876a82f387c9, type: 3}
   m_Name: 
@@ -122,6 +123,18 @@ MonoBehaviour:
     type: 3}
   BuildManagerDE: {fileID: 1594368700286138315, guid: d15e9e94b82b5a64aa4f27e188409516,
     type: 3}
+--- !u!225 &7617420084350747201
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5411957019212236681}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5411957019431398241
 GameObject:
   m_ObjectHideFlags: 0

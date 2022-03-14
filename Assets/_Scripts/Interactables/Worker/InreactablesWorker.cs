@@ -15,7 +15,10 @@ namespace LP.FDG.Interactables.Worker
         {
             highlight.SetActive(false);
             //buildingManager.SetActive(false);
+            buildingManager.GetComponent<BuildingManager>().enabled = false;
             //buildingTypeSelectUI.SetActive(false);
+            buildingTypeSelectUI.GetComponent<CanvasGroup>().alpha = 0f;
+            buildingTypeSelectUI.GetComponent<CanvasGroup>().interactable = false;
             buildingManager = GameObject.Find("/BuildingManager");
             buildingTypeSelectUI = GameObject.Find("BuildingTypeSelectUI");
         }
@@ -35,7 +38,10 @@ namespace LP.FDG.Interactables.Worker
         public virtual void ShowHighlight()
         {
             Debug.LogWarning("Show");
+            buildingManager.GetComponent<BuildingManager>().enabled = true;
             //buildingManager.SetActive(true);
+            buildingTypeSelectUI.GetComponent<CanvasGroup>().alpha = 1f;
+            buildingTypeSelectUI.GetComponent<CanvasGroup>().interactable = true;
             //buildingTypeSelectUI.SetActive(true);
             highlight.SetActive(true);
             //activatebuilding();

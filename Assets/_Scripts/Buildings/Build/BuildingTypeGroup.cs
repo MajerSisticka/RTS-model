@@ -85,7 +85,7 @@ namespace LP.FDG.Buildings.build
         }
         private void DestroyBuildManager()
         {
-            BuildManagerDE.SetActive(false);
+            BuildManagerDE.GetComponent<BuildingManager>().enabled = false;
         }
     }
 }

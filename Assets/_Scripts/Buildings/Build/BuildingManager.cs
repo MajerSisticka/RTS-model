@@ -52,11 +52,15 @@ namespace LP.FDG.Buildings.build
                         // jeden typ budovy
                         //Instantiate(prefab, raycastHit.point, Quaternion.identity);
                         // všechny typy
-                        Debug.Log("stavíme budovu" + activeBuildingType.buildingPrefab);
+                        Debug.LogWarning("stavíme budovu" + activeBuildingType.buildingPrefab);
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
-                        buildingmanager.SetActive(false);
-                        buildingTypeSelectUI.SetActive(false);
+
+                        //buildingmanager.SetActive(false);
+                        buildingmanager.GetComponent<BuildingManager>().enabled = false;
+                        //buildingTypeSelectUI.SetActive(false);
+                        buildingTypeSelectUI.GetComponent<CanvasGroup>().alpha = 0f;
+                        buildingTypeSelectUI.GetComponent<CanvasGroup>().interactable = false;
                         // yakomentovat 53 a 54
 
 
