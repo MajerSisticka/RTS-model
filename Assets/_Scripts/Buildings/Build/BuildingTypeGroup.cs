@@ -25,6 +25,8 @@ namespace LP.FDG.Buildings.build
         }
         private void Awake()
         {
+            buildingManager = GameObject.Find("/BuildingManager").GetComponent<BuildingManager>();
+            BuildManagerDE = GameObject.Find("/BuildingManager");
             SetButtonsBuilding();
             //DEactivatebuilding();
         }

@@ -11,7 +11,7 @@ namespace LP.FDG.Buildings.build
         [SerializeField] private BasicBuilding activeBuildingType;
         [SerializeField] private  GameObject prefab;
         [SerializeField] private GameObject buildingmanager;
-        [SerializeField] private GameObject buildingTypeSelectUI;
+        [SerializeField]private GameObject buildingTypeSelectUI;
         //[SerializeField] private List<GameObject> prefabs;
         private Camera cam = null;
         public Camera camera;
@@ -24,6 +24,11 @@ namespace LP.FDG.Buildings.build
         {
             SpawnBuilding();
             
+        }
+        private void Awake()
+        {
+            buildingmanager = GameObject.Find("/BuildingManager");
+            buildingTypeSelectUI = GameObject.Find("BuildingTypeSelectUI");
         }
         private void SpawnBuilding()
         {
@@ -50,8 +55,8 @@ namespace LP.FDG.Buildings.build
                         Debug.Log("stavíme budovu" + activeBuildingType.buildingPrefab);
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
-                        //buildingmanager.SetActive(false);
-                        //buildingTypeSelectUI.SetActive(false);
+                        buildingmanager.SetActive(false);
+                        buildingTypeSelectUI.SetActive(false);
                         // yakomentovat 53 a 54
 
 
