@@ -8,18 +8,24 @@ namespace LP.FDG.Resources
 {
     public class GetResources : MonoBehaviour
     {
-        public int Gold = 0;
-        [SerializeField]
-        public int CountMinerMinesGeathers = 0;
+        public int Gold = 10;     
+        public int DelayAmount = 2; // Second count
+        public Text GoldValueText;
+        public Text PowerText;
+
+        protected float Timer;
+
         void Update()
         {
-            Debug.LogWarning("Count Gold materials is : " + Gold);
-            StartCoroutine(waitToMine());
-            Gold = Gold + (CountMinerMinesGeathers * 2);            
-        }
-        private IEnumerator waitToMine()
-        {
-                yield return new WaitForSeconds(200000000000f);
+            Timer += Time.deltaTime;
+
+            if (Timer >= DelayAmount)
+            {
+                Timer = 1f;
+                Gold += 2;
+                
+            }
+            Debug.LogWarning("Poèet zlata" + Gold );
         }
     }
 }
