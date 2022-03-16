@@ -13,6 +13,7 @@ namespace LP.FDG.Buildings.build
         [SerializeField] private GameObject buildingmanager;
         [SerializeField]private GameObject buildingTypeSelectUI;
         //[SerializeField] private List<GameObject> prefabs;
+        public int CountMinerGold;
         private Camera cam = null;
         public Camera camera;
         public bool a = false;
@@ -55,7 +56,7 @@ namespace LP.FDG.Buildings.build
                         Debug.LogWarning("stavíme budovu" + activeBuildingType.buildingPrefab);
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
-
+                        CountMinerGold += 1; 
                         //buildingmanager.SetActive(false);
                         buildingmanager.GetComponent<BuildingManager>().enabled = false;
                         //buildingTypeSelectUI.SetActive(false);
