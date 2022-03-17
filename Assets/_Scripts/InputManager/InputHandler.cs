@@ -140,9 +140,10 @@ namespace LP.FDG.InputManager
                 {
                     selectedUnits[i].gameObject.GetComponent<Interactables.IUnit>().OnInteractExit();
                 }
-                //selectedUnits.Clear();
+                selectedUnits.Clear();
             }
             // přidáno
+            /*
             if (selectedUnits.Count > 0)
             {
                 for (int i = 0; i < selectedUnits.Count; i++)
@@ -151,7 +152,7 @@ namespace LP.FDG.InputManager
                 }
                 
             }
-            selectedUnits.Clear();
+            selectedUnits.Clear();*/
         }
 
         private bool isWithinSelectionBounds(Transform tf)
