@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using LP.FDG.Units.Player;
 using UnityEngine.EventSystems;
+using LP.FDG.Units;
 
 namespace LP.FDG.InputManager
 {
     public class InputHandler : MonoBehaviour
     {
         public static InputHandler instance;
+
+        public float maxHealth, armor, currentHealth;
+        private bool isPlayerUnit = false;
 
         private RaycastHit hit; //what we hit with our ray
 
@@ -19,8 +23,17 @@ namespace LP.FDG.InputManager
 
         private bool isDragging = false;
 
-        private Vector3 mousePos;
+        UnitStatTypes.Base stats;
 
+        private Vector3 mousePos;
+        private void Update()
+        {
+            if (selectedUnits.Count >= 1)
+            {
+                print("Ano");
+
+            }
+        }
         private void Awake()
         {
             instance = this;
@@ -35,7 +48,13 @@ namespace LP.FDG.InputManager
                 MultiSelect.DrawScreenRectBorder(rect, 3, Color.blue);
             }
         }
-
+        public void SetDataUnit(UnitStatTypes.Base stats, bool isPlayer)
+        {
+            maxHealth = stats.health;
+            armor = stats.armor;
+            isPlayerUnit = isPlayer;
+            currentHealth = maxHealth;
+        }
         public void HandleUnitMovement()
         {
             if (Input.GetMouseButtonDown(0))

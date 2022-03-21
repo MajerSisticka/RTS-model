@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using LP.FDG.InputManager;
 
 namespace LP.FDG.Units
 {
@@ -13,6 +14,7 @@ namespace LP.FDG.Units
         [SerializeField] private Image healthBarAmount;
 
         private bool isPlayerUnit = false;
+
         /*
         private void Start()
         {
@@ -58,7 +60,7 @@ namespace LP.FDG.Units
 
         private void Update()
         {
-            HandleHealth();
+            HandleHealth();            
         }
 
         public void TakeDamage(float damage)

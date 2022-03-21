@@ -25,7 +25,7 @@ namespace LP.FDG.Resources
                 Gold += 2;
                 
             }
-            Debug.LogWarning("Poèet zlata" + Gold );
+            //Debug.LogWarning("Poèet zlata" + Gold );
         }
     }
 }
