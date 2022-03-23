@@ -31,6 +31,7 @@ namespace LP.FDG.InputManager
             if (selectedUnits.Count >= 1)
             {
                 print("Ano");
+                Debug.LogWarning("nazdar " + selectedUnits[0].name);
 
             }
         }
