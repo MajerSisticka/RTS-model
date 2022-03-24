@@ -28,7 +28,10 @@ namespace LP.FDG.Units
         [SerializeField] private TextMeshProUGUI Armor;
         [SerializeField] private TextMeshProUGUI Range;
         //[SerializeField] private TextMeshProUGUI Name;
-
+        private void Update()
+        {
+            unitStatsDisplay();
+        }
         public void unitStatsDisplay()
         {
             selectedBuilding = instance.selectedBuilding;
