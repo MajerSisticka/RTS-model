@@ -69,12 +69,33 @@ namespace LP.FDG.Units.Enemy
 
         private void Attack()
         {
-            if(atkCooldown <= 0 && distance <= baseStats.atkRange + 1)
+            CheckForEnemyTargets();
+            try
+            {
+                CheckForEnemyTargets();
+                Debug.LogWarning("zautoc");
+                if (atkCooldown <= 0 && distance <= baseStats.atkRange + 1)
+                {
+                    CheckForEnemyTargets();
+                    Debug.LogWarning("JOJO");
+                    aggroUnit.TakeDamage(baseStats.attack);
+                    Debug.LogWarning("NENE");
+                    atkCooldown = baseStats.atkSpeed;
+
+                    Debug.LogWarning(aggroUnit);
+                    CheckForEnemyTargets();
+                    Debug.LogWarning(aggroUnit);
+                }
+            }
+            catch (System.Exception)
             {
 
-                aggroUnit.TakeDamage(baseStats.attack);
-                atkCooldown = baseStats.atkSpeed;
+                Debug.LogWarning(aggroUnit);
+                CheckForEnemyTargets();
+                Debug.LogWarning(aggroUnit);
+
             }
+            
         }
 
         private void MoveToAggroTarget()
