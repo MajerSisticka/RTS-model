@@ -55,11 +55,14 @@ namespace LP.FDG.Units.Enemy
         private void CheckForEnemyTargets()
         {
             rangeColliders = Physics.OverlapSphere(transform.position, baseStats.aggroRange, UnitHandler.instance.pUnitLayer);
+            Debug.LogWarning("hledání Range colliers");
             // rangeColliders = Physics.OverlapSphere(transform.position, baseStats.aggroRange, UnitHandler.instance.eUnitLayer);
 
             for (int i = 0; i < rangeColliders.Length;)
             {
+                Debug.LogWarning("nastavení AggroTarger");
                 aggroTarget = rangeColliders[i].gameObject.transform;
+                Debug.LogWarning("nastavení AggroUnit");
                 aggroUnit = aggroTarget.gameObject.GetComponentInChildren<UnitStatDisplay>();
                 // vytvořit skript pro Enumíka s  aggroUnit = aggroTarget.gameObject.GetComponentInChildren<EnemyUnitStatDisplay>();
                 hasAggro = true;
