@@ -13,6 +13,9 @@ namespace LP.FDG.Units
 
         [SerializeField] private Image healthBarAmount;
 
+        public int pUnitList = 0;
+        public int eUnitList = 0;
+
         private bool isPlayerUnit = false;
 
         /*
@@ -41,6 +44,17 @@ namespace LP.FDG.Units
 
             currentHealth = maxHealth;
         }*/
+        private void Start()
+        {
+            if (isPlayerUnit)
+            {
+                pUnitList = pUnitList + 1;
+            }
+            else
+            {
+                eUnitList = eUnitList + 1;
+            }
+        }
 
         public void SetStatDisplayBasicUnit(UnitStatTypes.Base stats,bool isPlayer)
         {
