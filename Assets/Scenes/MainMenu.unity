@@ -10016,7 +10016,7 @@ MonoBehaviour:
   qualityDropDown: {fileID: 1151340338}
   fullScreenToggle: {fileID: 404723551}
   comfimationPrompt: {fileID: 832605031}
-  _newGameLevel: Tutorial
+  _newGameLevel: Map screen
   nosavedGameDialog: {fileID: 437254767}
   resolutionDropdown: {fileID: 203441825}
 --- !u!4 &1569092370
