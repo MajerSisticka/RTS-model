@@ -14,6 +14,8 @@ namespace LP.FDG.Player
         public Transform enemyUnits;
 
         public Transform playerBuildings;
+        public int PlayerUnitsList = 0;
+        public int EnemyUnitsList = 0;
 
         private void Awake()
         {
@@ -21,11 +23,13 @@ namespace LP.FDG.Player
             SetBasicStats(playerUnits);
             SetBasicStats(enemyUnits);
             SetBasicStats(playerBuildings);
+            GetBasicStats(playerUnits);
+            GetBasicStats(enemyUnits);
         }
 
         private void Update()
         {
-            InputHandler.instance.HandleUnitMovement();
+            InputHandler.instance.HandleUnitMovement();           
         }
 
         public void SetBasicStats(Transform type)
@@ -40,13 +44,13 @@ namespace LP.FDG.Player
                     if (type == playerUnits)
                     {
                         Units.Player.PlayerUnit pU = tf.GetComponent<Units.Player.PlayerUnit>();
-                        pU.baseStats = Units.UnitHandler.instance.GetBasicUnitStats(name);
+                        pU.baseStats = Units.UnitHandler.instance.GetBasicUnitStats(name);                        
                     }
                     else if (type == enemyUnits)
                     {
                         // set enemy stats
                         Units.Enemy.EnemyUnit eU = tf.GetComponent<Units.Enemy.EnemyUnit>();
-                        eU.baseStats = Units.UnitHandler.instance.GetBasicUnitStats(name);
+                        eU.baseStats = Units.UnitHandler.instance.GetBasicUnitStats(name);                        
                     }
                     else if(type == playerBuildings)
                     {
@@ -56,6 +60,28 @@ namespace LP.FDG.Player
 
                     // if we have any upgrades add them now
                     // add upgrages to unit stats
+                }
+            }
+        }
+        public void GetBasicStats(Transform type)
+        {
+            foreach (Transform child in type)
+            {
+                foreach (Transform tf in child)
+                {                    
+
+                    if (type == playerUnits)
+                    {
+                        PlayerUnitsList += 1;
+                    }
+                    else if (type == enemyUnits)
+                    {
+                        EnemyUnitsList += 1;
+                    }
+                    else if (type == playerBuildings)
+                    {
+                        
+                    }
                 }
             }
         }
