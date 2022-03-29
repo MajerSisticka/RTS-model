@@ -16,6 +16,8 @@ namespace LP.FDG.Player
         public Transform playerBuildings;
         public int PlayerUnitsList = 0;
         public int EnemyUnitsList = 0;
+        public int PlayerBuildingsList = 0;
+
 
         private void Awake()
         {
@@ -25,11 +27,24 @@ namespace LP.FDG.Player
             SetBasicStats(playerBuildings);
             GetBasicStats(playerUnits);
             GetBasicStats(enemyUnits);
+            GetBasicStats(playerBuildings);
         }
 
         private void Update()
         {
-            InputHandler.instance.HandleUnitMovement();           
+            InputHandler.instance.HandleUnitMovement();
+            GetBasicStats(playerUnits);
+            GetBasicStats(enemyUnits);
+            GetBasicStats(playerBuildings);
+
+            if (PlayerUnitsList == 0 && PlayerBuildingsList == 0)
+            {
+                Debug.LogWarning("Defeat");
+            }
+            else if (EnemyUnitsList == 0)
+            {
+                Debug.LogWarning("Victory");
+            }
         }
 
         public void SetBasicStats(Transform type)
@@ -65,6 +80,18 @@ namespace LP.FDG.Player
         }
         public void GetBasicStats(Transform type)
         {
+            if (type == playerUnits)
+            {
+                PlayerUnitsList = 0;
+            }
+            else if (type == enemyUnits)
+            {
+                EnemyUnitsList = 0;
+            }
+            else if (type == playerBuildings)
+            {
+                PlayerBuildingsList = 0;
+            }
             foreach (Transform child in type)
             {
                 foreach (Transform tf in child)
@@ -80,7 +107,7 @@ namespace LP.FDG.Player
                     }
                     else if (type == playerBuildings)
                     {
-                        
+                        PlayerBuildingsList += 1;
                     }
                 }
             }
