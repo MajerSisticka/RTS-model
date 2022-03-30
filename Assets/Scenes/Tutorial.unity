@@ -5794,6 +5794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852102163}
   - component: {fileID: 1852102162}
+  - component: {fileID: 1852102161}
   m_Layer: 0
   m_Name: MinimapCamera
   m_TagString: Untagged
@@ -5801,6 +5802,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1852102161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852102160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e557fe342180dd46914a47485fe6d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CamSpeed: 20
+  CamBorderMouse: 10
+  CamLimit: {x: 250, y: 250}
+  MouseScrollSpeed: 20
+  MinY: 20
+  MaxY: 120
 --- !u!20 &1852102162
 Camera:
   m_ObjectHideFlags: 0
@@ -5852,7 +5871,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852102160}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 15.1, y: 35.7, z: 4}
+  m_LocalPosition: {x: 15.1, y: 152.4, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
