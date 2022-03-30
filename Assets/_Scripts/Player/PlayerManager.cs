@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using LP.FDG.InputManager;
+using UnityEngine.SceneManagement;
 
 namespace LP.FDG.Player
 {
@@ -12,8 +13,13 @@ namespace LP.FDG.Player
 
         public Transform playerUnits;
         public Transform enemyUnits;
-
         public Transform playerBuildings;
+
+        [SerializeField]
+        public string WinScene;
+        [SerializeField]
+        public string LostScene;
+
         public int PlayerUnitsList = 0;
         public int EnemyUnitsList = 0;
         public int PlayerBuildingsList = 0;
@@ -37,13 +43,39 @@ namespace LP.FDG.Player
             GetBasicStats(enemyUnits);
             GetBasicStats(playerBuildings);
 
-            if (PlayerUnitsList == 0 && PlayerBuildingsList == 0)
+            // && PlayerBuildingsList == 0
+
+            if (PlayerUnitsList == 0)
             {
                 Debug.LogWarning("Defeat");
+                try
+                {
+                    SceneManager.LoadScene(LostScene);
+                }
+                catch (System.Exception)
+                {
+
+                    Debug.LogWarning("Scéna nenalezena");
+                }
+
+
+
+
+                
             }
             else if (EnemyUnitsList == 0)
             {
                 Debug.LogWarning("Victory");
+                try
+                {
+                    SceneManager.LoadScene(WinScene);
+                }
+                catch (System.Exception)
+                {
+
+                    Debug.LogWarning("Scéna nenalezena");
+                }
+                
             }
         }
 

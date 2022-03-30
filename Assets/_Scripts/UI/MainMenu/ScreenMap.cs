@@ -12,7 +12,16 @@ namespace LP.FDG.UI.MainMenu
                 
         public void SetLevel()
         {
-            SceneManager.LoadScene(LevelToLoad);
+            try
+            {
+                SceneManager.LoadScene(LevelToLoad);
+            }
+            catch (System.Exception)
+            {
+
+                Debug.LogWarning("Scéna nenalezena");
+            }
+            
         }
         
     }

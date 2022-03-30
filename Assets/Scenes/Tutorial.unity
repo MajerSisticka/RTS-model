@@ -3199,6 +3199,8 @@ MonoBehaviour:
   playerUnits: {fileID: 1773683317}
   enemyUnits: {fileID: 1219901530}
   playerBuildings: {fileID: 1948290602}
+  WinScene: Win Scene
+  LostScene: Lost Scene
   PlayerUnitsList: 0
   EnemyUnitsList: 0
   PlayerBuildingsList: 0
