@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LP.FDG.Units.BasicUnit">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="LP.FDG.Units.BasicUnit.unitType">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\_Scripts\Units\BasicUnit.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAEAAAAAAAAAAAAAAAAAAAFAAAQAQAAAAAEAAA=</HashCode>
+      <FileName>Assets\_Scripts\Units\BasicUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.UnitHandler">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAAAQAAAAAAAAAAAAAABAAAAAEQAgAAAAAEQ=</HashCode>
+      <FileName>Assets\_Scripts\Units\UnitHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.UnitStatDisplay">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAIACAAAAigAAAAAAAASAAECAAAIAAAgBABAAA=</HashCode>
+      <FileName>Assets\_Scripts\Units\UnitStatDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.UnitStatTypes">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="LP.FDG.Units.UnitStatTypes.Base">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\_Scripts\Units\UnitStatTypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Units\UnitStatTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.UnitStatUI">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAgECAAAAAAAAAAAIIBEAAAIEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Units\UnitStatUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.Enemy.EnemyUnit">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQEAEAAgSAAAAAAAAAAAAEAQMAAAAAAEAQAAAAAgAQ=</HashCode>
+      <FileName>Assets\_Scripts\Units\Enemy\EnemyUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.Player.PlayerUnit">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQEAGAAgSAAABAAACAAAAEAQMAAAAAAEAQAAAAAgAQ=</HashCode>
+      <FileName>Assets\_Scripts\Units\Player\PlayerUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

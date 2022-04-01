@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LP.FDG.Interactables.IBuilding">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAgAMAAAAACBAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Interactables\IBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Interactables.Interactable">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABhAAAAAAEA=</HashCode>
+      <FileName>Assets\_Scripts\Interactables\Interactable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Interactables.IUnit">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Interactables\IUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

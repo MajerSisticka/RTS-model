@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LP.FDG.Buildings.BasicBuilding" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAEAAAAAAAAABAFAAAAAQAAAAAEAAA=</HashCode>
+      <FileName>Assets\_Scripts\Buildings\BasicBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Buildings.BuildingHandler" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAgMBAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\_Scripts\Buildings\BuildingHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Buildings.BuildingStatTypes" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Buildings\BuildingStatTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Buildings.build.BlueprintBuildings" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAACAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Buildings\Build\BlueprintBuildings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Buildings.build.buildBuillding" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Buildings\Build\buildBuillding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Buildings.build.BuildingManager" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QASABCAAAiAAAABACAAAQAIAAAEEAAAgACAIDAAEAGA=</HashCode>
+      <FileName>Assets\_Scripts\Buildings\Build\BuildingManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Buildings.build.BuildingTypeGroup" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAgAAAAAACAIAAACICAAAAAAAAMABAAAAAAACAAIAEA=</HashCode>
+      <FileName>Assets\_Scripts\Buildings\Build\BuildingTypeGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Buildings.Player.PlayerBuilding" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAAAAAAAAAAAAAIAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Buildings\Player\PlayerBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraController" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQQAAAAgAAAAQAAAAAAAAAAAAAAAAAAAAQAAABAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Camera\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadPrefs" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAgACQAAAECAAABAAAAAAAAAIAAAAgAACAAEA=</HashCode>
+      <FileName>Assets\_Scripts\UI\MainMenu\LoadPrefs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuController" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADBACAAACCwAAIUCICRAgARAAAFACKAAYSkABSAEAA=</HashCode>
+      <FileName>Assets\_Scripts\UI\MainMenu\MenuController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.InputManager.ChangeToMenu" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\InputManager\ChangeToMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.InputManager.InputHandler" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCCgAYARBIAgAAAAAAAAgAAABkgAAAAACwAFEAAEA=</HashCode>
+      <FileName>Assets\_Scripts\InputManager\InputHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.InputManager.MultiSelect" Collapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAEAAAAAAAAAAAABAAAAEAAAAAIAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\_Scripts\InputManager\MultiSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Interactables.IBuilding" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAgAMAAAAACBAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Interactables\IBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Interactables.Interactable" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABhAAAAAAEA=</HashCode>
+      <FileName>Assets\_Scripts\Interactables\Interactable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Interactables.IUnit" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Interactables\IUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Interactables.Worker.InreactablesWorker" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAACAEAAAAAAAAAAAAAAAAAAAAAAAAABhACAAAAEA=</HashCode>
+      <FileName>Assets\_Scripts\Interactables\Worker\InreactablesWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Interactables.Worker.IWorker" Collapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Interactables\Worker\IWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Player.CountUnit" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Player\CountUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Player.PlayerManager" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAYEAAAAAKAAAgAAAAAAAAAIAABAQAAAAAAIAAAAAEA=</HashCode>
+      <FileName>Assets\_Scripts\Player\PlayerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Resources.GetResources" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAgIABAAAAAAAAAAAAEAAE=</HashCode>
+      <FileName>Assets\_Scripts\Resources\GetResources.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.UI.HUD.Action" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\UI\HUD\Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.UI.HUD.ActionFrame" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACCACAAAAAoAABAAAQACFAAABAAAAAEEEAAEA=</HashCode>
+      <FileName>Assets\_Scripts\UI\HUD\ActionFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.UI.HUD.ActionTimer" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\_Scripts\UI\HUD\ActionTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.UI.HUD.PlayerActions" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\_Scripts\UI\HUD\PlayerActions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.UI.MainMenu.ScreenMap" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\_Scripts\UI\MainMenu\ScreenMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.BasicUnit" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAEAAAAAAAAAAAAAAAAAAAFAAAQAQAAAAAEAAA=</HashCode>
+      <FileName>Assets\_Scripts\Units\BasicUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.UnitHandler" Collapsed="true">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAAAQAAAAAAAAAAAAAABAAAAAEQAgAAAAAEQ=</HashCode>
+      <FileName>Assets\_Scripts\Units\UnitHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.UnitStatDisplay" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAIACAAAAigAAAAAAAASAAECAAAIAAAgBABAAA=</HashCode>
+      <FileName>Assets\_Scripts\Units\UnitStatDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.UnitStatTypes" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Units\UnitStatTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.UnitStatUI" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAgECAAAAAAAAAAAIIBEAAAIEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\Units\UnitStatUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.Enemy.EnemyUnit" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQEAEAAgSAAAAAAAAAAAAEAQMAAAAAAEAQAAAAAgAQ=</HashCode>
+      <FileName>Assets\_Scripts\Units\Enemy\EnemyUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.Units.Player.PlayerUnit" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQEAGAAgSAAABAAACAAAAEAQMAAAAAAEAQAAAAAgAQ=</HashCode>
+      <FileName>Assets\_Scripts\Units\Player\PlayerUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

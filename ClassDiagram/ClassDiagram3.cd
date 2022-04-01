@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LP.FDG.UI.HUD.Action">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Scripts\UI\HUD\Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.UI.HUD.ActionFrame">
+    <Position X="6.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACCACAAAAAoAABAAAQACFAAABAAAAAEEEAAEA=</HashCode>
+      <FileName>Assets\_Scripts\UI\HUD\ActionFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.UI.HUD.ActionTimer">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\_Scripts\UI\HUD\ActionTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP.FDG.UI.HUD.PlayerActions">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\_Scripts\UI\HUD\PlayerActions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
