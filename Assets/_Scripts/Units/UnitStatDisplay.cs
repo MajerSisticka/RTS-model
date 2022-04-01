@@ -11,6 +11,9 @@ namespace LP.FDG.Units
     {
         public float maxHealth, armor, currentHealth;
 
+        [SerializeField]
+        public AudioSource AttackSound;
+
         [SerializeField] private Image healthBarAmount;
 
         public int pUnitList = 0;
@@ -81,6 +84,7 @@ namespace LP.FDG.Units
         {
             float totalDamage = damage - armor;
             currentHealth -= totalDamage;
+            AttackSound.Play(0);
         }
 
         private void HandleHealth()
