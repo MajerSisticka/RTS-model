@@ -32,4 +32,52 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2 Level/Win Scene 2.unity
     guid: 4f42efd50d9cb8244be0db5dfedd4fc6
+  - enabled: 1
+    path: Assets/Scenes/3 Level/Map screen 3.unity
+    guid: e9862cbab7da4e949ab077ce98c8be55
+  - enabled: 1
+    path: Assets/Scenes/3 Level/Tutorial 3.unity
+    guid: 46410561b5412ee4d90a9c6b2e4e0d81
+  - enabled: 1
+    path: Assets/Scenes/3 Level/Lost Scene 3.unity
+    guid: f5e587f859819d44eadb3a08aaeb2777
+  - enabled: 1
+    path: Assets/Scenes/3 Level/Win Scene 3.unity
+    guid: 19861c50bad372548bf440e4ef159677
+  - enabled: 1
+    path: Assets/Scenes/4 Level/Map screen 4.unity
+    guid: 55018104b6431494ab85bd2530ca2dd0
+  - enabled: 1
+    path: Assets/Scenes/4 Level/Tutorial 4.unity
+    guid: d3fd1e74d649e794388e47b0bf28827d
+  - enabled: 1
+    path: Assets/Scenes/4 Level/Lost Scene 4.unity
+    guid: 170aa735a37abc442a28b983156bb94a
+  - enabled: 1
+    path: Assets/Scenes/4 Level/Win Scene 4.unity
+    guid: 0154efc6ae7681747935737c5e3026ed
+  - enabled: 1
+    path: Assets/Scenes/5 Level/Map screen 5.unity
+    guid: 684e27bc154ca0d448294925be63906f
+  - enabled: 1
+    path: Assets/Scenes/5 Level/Tutorial 5.unity
+    guid: cd0e928a7143c304e88145a145a2020d
+  - enabled: 1
+    path: Assets/Scenes/5 Level/Lost Scene 5.unity
+    guid: 21922fda2d3cd424c8845102e1515097
+  - enabled: 1
+    path: Assets/Scenes/5 Level/Win Scene 5.unity
+    guid: 6fb8713d750f17b4e9b47a935d9e2075
+  - enabled: 1
+    path: Assets/Scenes/6 Level/Map screen 6.unity
+    guid: cb15e57380412a145b708d49299355e8
+  - enabled: 1
+    path: Assets/Scenes/6 Level/Tutorial 6.unity
+    guid: 789a6a861a3e5b548a80c3a2afcd979c
+  - enabled: 1
+    path: Assets/Scenes/6 Level/Lost Scene 6.unity
+    guid: bc02435ae0f4381498ef4db931a2cafe
+  - enabled: 1
+    path: Assets/Scenes/6 Level/Win Scene 6.unity
+    guid: 9499030214473374dae194c82a44daf0
   m_configObjects: {}
