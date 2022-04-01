@@ -158,7 +158,16 @@ namespace LP.FDG.InputManager
             {
                 for (int i = 0; i < selectedUnits.Count; i++)
                 {
-                    selectedUnits[i].gameObject.GetComponent<Interactables.IUnit>().OnInteractExit();
+                    try
+                    {
+                        selectedUnits[i].gameObject.GetComponent<Interactables.IUnit>().OnInteractExit();
+                    }
+                    catch (System.Exception)
+                    {
+
+                        Debug.LogWarning("Selected Unit");
+                    }
+                    
                 }
                 selectedUnits.Clear();
             }

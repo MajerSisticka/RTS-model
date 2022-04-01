@@ -38,7 +38,16 @@ namespace LP.FDG.Player
 
         private void Update()
         {
-            InputHandler.instance.HandleUnitMovement();
+            try
+            {
+                InputHandler.instance.HandleUnitMovement();
+            }
+            catch (System.Exception)
+            {
+
+                Debug.LogWarning("Handle Unit moveve Error");
+            }
+            
             GetBasicStats(playerUnits);
             GetBasicStats(enemyUnits);
             GetBasicStats(playerBuildings);
