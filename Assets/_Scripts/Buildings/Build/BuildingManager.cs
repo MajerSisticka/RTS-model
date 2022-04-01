@@ -12,6 +12,7 @@ namespace LP.FDG.Buildings.build
         [SerializeField] private  GameObject prefab;
         [SerializeField] private GameObject buildingmanager;
         [SerializeField]private GameObject buildingTypeSelectUI;
+        [SerializeField] public AudioSource BuildSound;
         //[SerializeField] private List<GameObject> prefabs;
         public int CountMinerGold;
         private Camera cam = null;
@@ -56,6 +57,15 @@ namespace LP.FDG.Buildings.build
                         Debug.LogWarning("stavíme budovu" + activeBuildingType.buildingPrefab);
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
+                        try
+                        {
+                            BuildSound.Play(0);
+                        }
+                        catch (System.Exception)
+                        {
+
+                            Debug.LogWarning("Zvuk nenalezen");
+                        }
                         CountMinerGold += 1; 
                         //buildingmanager.SetActive(false);
                         buildingmanager.GetComponent<BuildingManager>().enabled = false;

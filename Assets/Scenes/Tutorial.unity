@@ -891,7 +891,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 2.0521164, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7207,6 +7207,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485186463102964600, guid: d15e9e94b82b5a64aa4f27e188409516,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 1118.5798
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485186463102964600, guid: d15e9e94b82b5a64aa4f27e188409516,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15e9e94b82b5a64aa4f27e188409516, type: 3}
