@@ -84,7 +84,16 @@ namespace LP.FDG.Units
         {
             float totalDamage = damage - armor;
             currentHealth -= totalDamage;
-            AttackSound.Play(0);
+            try
+            {
+                AttackSound.Play(0);
+            }
+            catch (Exception)
+            {
+
+                Debug.LogWarning("chyba zvuku");
+            }
+            
         }
 
         private void HandleHealth()
