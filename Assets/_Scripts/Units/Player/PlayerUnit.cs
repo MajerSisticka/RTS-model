@@ -43,7 +43,7 @@ namespace LP.FDG.Units.Player
         private void Update()
         {
             atkCooldown -= Time.deltaTime;
-            StartCoroutine(AttackAgainFucker());
+            StartCoroutine(AttackAgain());
 
             if (!hasAggro)
             {
@@ -128,7 +128,7 @@ namespace LP.FDG.Units.Player
             
         }
 
-        private IEnumerator AttackAgainFucker()
+        private IEnumerator AttackAgain()
         {
             if(checkClick)
             {
