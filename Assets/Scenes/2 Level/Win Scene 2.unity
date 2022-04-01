@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5730af48f9c77489f0127025f763e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: Map screen 2
+  LevelToLoad: 
 --- !u!1 &993093612
 GameObject:
   m_ObjectHideFlags: 0
