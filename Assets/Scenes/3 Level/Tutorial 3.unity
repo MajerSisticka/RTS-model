@@ -2790,7 +2790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 5, y: 25, z: 5}
+  m_LocalPosition: {x: 5, y: 25, z: 9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2808,9 +2808,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e557fe342180dd46914a47485fe6d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CamSpeed: 20
+  CamSpeed: 50
   CamBorderMouse: 10
-  CamLimit: {x: 250, y: 250}
+  CamLimit: {x: 460, y: 476}
   MouseScrollSpeed: 20
   MinY: 20
   MaxY: 120
@@ -5911,9 +5911,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e557fe342180dd46914a47485fe6d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CamSpeed: 20
+  CamSpeed: 50
   CamBorderMouse: 10
-  CamLimit: {x: 250, y: 250}
+  CamLimit: {x: 460, y: 476}
   MouseScrollSpeed: 20
   MinY: 20
   MaxY: 120
