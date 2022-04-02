@@ -2810,7 +2810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamSpeed: 20
   CamBorderMouse: 10
-  CamLimit: {x: 250, y: 250}
+  CamLimit: {x: 460, y: 470}
   MouseScrollSpeed: 20
   MinY: 20
   MaxY: 120
@@ -5913,7 +5913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamSpeed: 20
   CamBorderMouse: 10
-  CamLimit: {x: 250, y: 250}
+  CamLimit: {x: 460, y: 470}
   MouseScrollSpeed: 20
   MinY: 20
   MaxY: 120
