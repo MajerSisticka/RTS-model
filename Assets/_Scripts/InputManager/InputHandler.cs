@@ -23,6 +23,8 @@ namespace LP.FDG.InputManager
 
         private bool isDragging = false;
 
+        public bool Neprepinat = false;
+
         UnitStatTypes.Base stats;
 
         private Vector3 mousePos;
@@ -31,7 +33,7 @@ namespace LP.FDG.InputManager
             if (selectedUnits.Count >= 1)
             {
                 print("Ano");
-                //Debug.LogWarning("nazdar " + selectedUnits[0].name);
+                Debug.LogWarning("jednotka vytvořena a přidána do selected listu ");
 
             }
         }
@@ -168,6 +170,18 @@ namespace LP.FDG.InputManager
                         Debug.LogWarning("Selected Unit");
                     }
                     
+                }
+                selectedUnits.Clear();
+            }
+            if (Neprepinat)
+            {
+                if (selectedUnits.Count > 0)
+                {
+                    for (int i = 0; i < selectedUnits.Count; i++)
+                    {
+                        selectedUnits[i].gameObject.GetComponent<Interactables.Worker.IWorker>().OnInteractExit();
+                    }
+
                 }
                 selectedUnits.Clear();
             }

@@ -55,7 +55,7 @@ namespace LP.FDG.Units.Player
                     {
                         Attack();
                         MoveToAggroTarget();
-                        //Debug.Log("utočime a");
+                        Debug.Log("utočime a");
                     }
             }
         }
@@ -81,13 +81,13 @@ namespace LP.FDG.Units.Player
         private void CheckForEnemyTargets()
         {
             rangeColliders = Physics.OverlapSphere(transform.position, baseStats.aggroRange, UnitHandler.instance.eUnitLayer);
-            // rangeColliders = Physics.OverlapSphere(transform.position, baseStats.aggroRange, UnitHandler.instance.eUnitLayer);
+            Debug.Log("rangeColliders = Physics.OverlapSphere(transform.position, baseStats.aggroRange, UnitHandler.instance.eUnitLayer);");
 
             for (int i = 0; i < rangeColliders.Length;)
             {
                 aggroTarget = rangeColliders[i].gameObject.transform;
                 aggroUnit = aggroTarget.gameObject.GetComponentInChildren<UnitStatDisplay>();
-                // vytvořit skript pro Enumíka s  aggroUnit = aggroTarget.gameObject.GetComponentInChildren<EnemyUnitStatDisplay>();
+                Debug.Log("vytvořit skript pro Enumíka s  aggroUnit = aggroTarget.gameObject.GetComponentInChildren<EnemyUnitStatDisplay>();");
                 hasAggro = true;
                 break;
             }
@@ -133,6 +133,7 @@ namespace LP.FDG.Units.Player
             if(checkClick)
             {
                 yield return new WaitForSeconds(5f);// yield return new WaitForSeconds(x = delka toho resetu cooldanu pro utok)
+                Debug.Log("// yield return new WaitForSeconds(x = delka toho resetu cooldanu pro utok)");
                 checkClick = false;
             }
         }
