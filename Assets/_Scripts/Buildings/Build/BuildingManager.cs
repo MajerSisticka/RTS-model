@@ -74,12 +74,15 @@ namespace LP.FDG.Buildings.build
                         buildingTypeSelectUI.GetComponent<CanvasGroup>().interactable = false;
                         // yakomentovat 53 a 54
 
+                        if (a)
+                        {
+                            Player.PlayerBuilding basicBuilding = activeBuildingType.buildingPrefab.AddComponent<Buildings.Player.PlayerBuilding>();
+                            basicBuilding.transform.SetParent(GameObject.Find("Player " + basicBuilding.buildingType.type.ToString() + "s").transform);
 
-                        //Player.PlayerBuilding basicBuilding = activeBuildingType.buildingPrefab.AddComponent<Buildings.Player.PlayerBuilding>();
-                        //basicBuilding.transform.SetParent(GameObject.Find("Player " + basicBuilding.buildingType.type.ToString() + "s").transform);
+                            Debug.Log("Units.Player.PlayerUnit pu = spawnedObject.GetComponent<Units.Player.PlayerUnit>();");
+                            Debug.Log("pu.transform.SetParent(GameObject.Find(Player  + pu.unitType.type.ToString() + s).transform);");
+                        }
 
-                        //Units.Player.PlayerUnit pu = spawnedObject.GetComponent<Units.Player.PlayerUnit>();
-                        //pu.transform.SetParent(GameObject.Find("Player " + pu.unitType.type.ToString() + "s").transform);
                     }
                 }
 
