@@ -18,34 +18,15 @@ namespace LP.FDG.Units
 
         public int pUnitList = 0;
         public int eUnitList = 0;
+        public bool OFF = false;
 
         private bool isPlayerUnit = false;
 
         /*
         private void Start()
         {
-            try
-            {
-                maxHealth = gameObject.GetComponentInParent<Player.PlayerUnit>().baseStats.health;
-                armor = gameObject.GetComponentInParent<Player.PlayerUnit>().baseStats.armor;
-                isPlayerUnit = true;
-            }
-            catch(Exception)
-            {
-                Debug.Log("No player Unit. Trying Enemy Unit...");
-                try
-                {
-                    maxHealth = gameObject.GetComponentInParent<Enemy.EnemyUnit>().baseStats.health;
-                    armor = gameObject.GetComponentInParent<Enemy.EnemyUnit>().baseStats.armor;
-                    isPlayerUnit = false;
-                }
-                catch(Exception)
-                {
-                    Debug.Log("No Unit Scripts found!");
-                }
-            }
-
-            currentHealth = maxHealth;
+          
+            
         }*/
         private void Start()
         {
@@ -57,6 +38,33 @@ namespace LP.FDG.Units
             {
                 eUnitList = eUnitList + 1;
             }
+
+            if (OFF)
+            {
+                try
+                {
+                    maxHealth = gameObject.GetComponentInParent<Player.PlayerUnit>().baseStats.health;
+                    armor = gameObject.GetComponentInParent<Player.PlayerUnit>().baseStats.armor;
+                    isPlayerUnit = true;
+                }
+                catch (Exception)
+                {
+                    Debug.Log("No player Unit. Trying Enemy Unit...");
+                    try
+                    {
+                        maxHealth = gameObject.GetComponentInParent<Enemy.EnemyUnit>().baseStats.health;
+                        armor = gameObject.GetComponentInParent<Enemy.EnemyUnit>().baseStats.armor;
+                        isPlayerUnit = false;
+                    }
+                    catch (Exception)
+                    {
+                        Debug.Log("No Unit Scripts found!");
+                    }
+                }
+
+                currentHealth = maxHealth;
+            }
+
         }
 
         public void SetStatDisplayBasicUnit(UnitStatTypes.Base stats,bool isPlayer)
