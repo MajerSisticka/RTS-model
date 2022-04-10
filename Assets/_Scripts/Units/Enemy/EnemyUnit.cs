@@ -55,14 +55,23 @@ namespace LP.FDG.Units.Enemy
         private void CheckForEnemyTargets()
         {
             rangeColliders = Physics.OverlapSphere(transform.position, baseStats.aggroRange, UnitHandler.instance.pUnitLayer);
-            Debug.LogWarning("hledání Range colliers");
+            Debug.LogWarning
+            (
+            "hledání Range colliers"
+            );
             // rangeColliders = Physics.OverlapSphere(transform.position, baseStats.aggroRange, UnitHandler.instance.eUnitLayer);
 
             for (int i = 0; i < rangeColliders.Length;)
             {
-                Debug.LogWarning("nastavení AggroTarger");
+                Debug.LogWarning
+                (
+                "nastavení AggroTarger"
+                );
                 aggroTarget = rangeColliders[i].gameObject.transform;
-                Debug.LogWarning("nastavení AggroUnit");
+                Debug.LogWarning
+                (
+                "nastavení AggroUnit"
+                );
                 aggroUnit = aggroTarget.gameObject.GetComponentInChildren<UnitStatDisplay>();
                 // vytvořit skript pro Enumíka s  aggroUnit = aggroTarget.gameObject.GetComponentInChildren<EnemyUnitStatDisplay>();
                 hasAggro = true;
@@ -76,26 +85,47 @@ namespace LP.FDG.Units.Enemy
             try
             {
                 CheckForEnemyTargets();
-                Debug.LogWarning("zautoc");
+                Debug.LogWarning
+                (
+                "zautoc"
+                );
                 if (atkCooldown <= 0 && distance <= baseStats.atkRange + 1)
                 {
                     CheckForEnemyTargets();
-                    Debug.LogWarning("JOJO");
+                    Debug.LogWarning
+                    (
+                    "JOJO"
+                    );
                     aggroUnit.TakeDamage(baseStats.attack);
-                    Debug.LogWarning("NENE");
+                    Debug.LogWarning
+                    (
+                    "NENE"
+                    );
                     atkCooldown = baseStats.atkSpeed;
 
-                    Debug.LogWarning(aggroUnit);
+                    Debug.LogWarning
+                    (
+                    aggroUnit
+                    );
                     CheckForEnemyTargets();
-                    Debug.LogWarning(aggroUnit);
+                    Debug.LogWarning
+                    (
+                    aggroUnit
+                    );
                 }
             }
             catch (System.Exception)
             {
 
-                Debug.LogWarning(aggroUnit);
+                Debug.LogWarning
+                (
+                aggroUnit
+                );
                 CheckForEnemyTargets();
-                Debug.LogWarning(aggroUnit);
+                Debug.LogWarning
+                (
+                aggroUnit
+                );
 
             }
             
