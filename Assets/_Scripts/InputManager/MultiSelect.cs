@@ -25,18 +25,48 @@ namespace LP.FDG.InputManager
 
         public static void DrawScreenRect(Rect rect, Color color)
         {
+            Debug.Log
+            (
+            "vybírání barvy "
+            +
+            "pro značení výseče"
+            );
             GUI.color = color;
             GUI.DrawTexture(rect, WhiteTexture);
         }
 
         public static void DrawScreenRectBorder(Rect rect, float thickness, Color color)
         {
+            Debug.Log
+            (
+            "malování výseče" 
+            +
+            " Nahoře / TOP"
+            );
             //Top
-            DrawScreenRect(new Rect(rect.xMin, rect.yMin, rect.width, thickness), color);
+            DrawScreenRect(new Rect(rect.xMin, rect.yMin, rect.width, thickness), color);            
+            Debug.Log
+            (
+            "malování výseče" 
+            +
+            " Dole / bottom"
+            );
             //Botom
             DrawScreenRect(new Rect(rect.xMin, rect.yMax - thickness, rect.width, thickness), color);
+            Debug.Log
+            (
+            "malování výseče" 
+            +
+            " Vlevo / Left"
+            );
             //Left
-            DrawScreenRect(new Rect(rect.xMin, rect.yMin, thickness, rect.height), color);
+            DrawScreenRect(new Rect(rect.xMin, rect.yMin, thickness, rect.height), color);            
+            Debug.Log
+            (
+            "malování výseče" 
+            +
+            " Vpravo / Right"
+            );
             //Right
             DrawScreenRect(new Rect(rect.xMax - thickness, rect.yMin, thickness, rect.height), color);
         }

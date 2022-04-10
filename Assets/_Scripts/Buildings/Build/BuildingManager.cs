@@ -42,7 +42,12 @@ namespace LP.FDG.Buildings.build
             {
                 Debug.DrawRay(mouse, Vector3.down * raycastHit.distance, Color.yellow);
                 //pozice myši
-                Debug.Log(raycastHit.point); // pozice kde reycast hitnul zem
+                Debug.Log
+                (
+                raycastHit.point
+                +
+                "pozice kde reycast hitnul zem"
+                ); // pozice kde reycast hitnul zem
             }
 
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
@@ -54,8 +59,12 @@ namespace LP.FDG.Buildings.build
                         // jeden typ budovy
                         //Instantiate(prefab, raycastHit.point, Quaternion.identity);
                         // všechny typy
-                        Debug.LogWarning("stavíme budovu" + activeBuildingType.buildingPrefab
-                            );
+                        Debug.LogWarning
+                        (
+                        "stavíme budovu"
+                        + 
+                        activeBuildingType.buildingPrefab
+                        );
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
                         try
@@ -65,7 +74,10 @@ namespace LP.FDG.Buildings.build
                         catch (System.Exception)
                         {
 
-                            Debug.LogWarning("Zvuk nenalezen");
+                            Debug.LogWarning
+                            (
+                            "Zvuk nenalezen"
+                            );
                         }
                         CountMinerGold += 1; 
                         //buildingmanager.SetActive(false);
@@ -80,10 +92,14 @@ namespace LP.FDG.Buildings.build
                             Player.PlayerBuilding basicBuilding = activeBuildingType.buildingPrefab.AddComponent<Buildings.Player.PlayerBuilding>();
                             basicBuilding.transform.SetParent(GameObject.Find("Player " + basicBuilding.buildingType.type.ToString() + "s").transform);
 
-                            Debug.Log("Units.Player.PlayerUnit pu = spawnedObject.GetComponent<Units.Player.PlayerUnit>();"
-                                );
-                            Debug.Log("pu.transform.SetParent(GameObject.Find(Player  + pu.unitType.type.ToString() + s).transform);"
-                                );
+                            Debug.Log
+                            (
+                            "Units.Player.PlayerUnit pu = spawnedObject.GetComponent<Units.Player.PlayerUnit>();"
+                            );
+                            Debug.Log
+                            (
+                            "pu.transform.SetParent(GameObject.Find(Player  + pu.unitType.type.ToString() + s).transform);"
+                            );
                         }
 
                     }
@@ -106,8 +122,14 @@ namespace LP.FDG.Buildings.build
                         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
                         RaycastHit hit;
                         Physics.Raycast(ray, out hit);
-                        Debug.Log(ray);
-                        Debug.Log(hit);
+                        Debug.Log
+                        (
+                        ray
+                        );
+                        Debug.Log
+                        (
+                        hit
+                        );
                         if (Physics.Raycast(ray, out hit))
                         {
                             activeBuildingType.buildingPrefab.transform.position = hit.point;
@@ -138,7 +160,10 @@ namespace LP.FDG.Buildings.build
             if (Physics.Raycast(mouse, Vector3.down, out raycastHit))
             {
                 Debug.DrawRay(mouse, Vector3.down * raycastHit.distance, Color.yellow);
-                Debug.Log(raycastHit.point); // pozice kde reycast hitnul zem
+                Debug.Log
+                (
+                raycastHit.point
+                ); // pozice kde reycast hitnul zem
             }           
         }
         public void SetactiveBasicbuildings(BasicBuilding buildtype)
