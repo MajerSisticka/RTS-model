@@ -19,7 +19,10 @@ namespace LP.FDG.UI.MainMenu
             catch (System.Exception)
             {
 
-                Debug.LogWarning("Scéna nenalezena");
+                Debug.LogWarning
+                (
+                "Scéna nenalezena"
+                );
             }
             
         }
