@@ -45,8 +45,10 @@ namespace LP.FDG.Player
             catch (System.Exception)
             {
 
-                Debug.LogWarning("Handle Unit moveve Error"
-                    );
+                Debug.LogWarning
+                (
+                "Handle Unit moveve Error"
+                );
             }
             
             GetBasicStats(playerUnits);
@@ -57,8 +59,10 @@ namespace LP.FDG.Player
 
             if (PlayerUnitsList == 0)
             {
-                Debug.LogWarning("Defeat"
-                    );
+                Debug.LogWarning
+                (
+                "Defeat"
+                );
                 try
                 {
                     SceneManager.LoadScene(LostScene);
@@ -66,8 +70,10 @@ namespace LP.FDG.Player
                 catch (System.Exception)
                 {
 
-                    Debug.LogWarning("Scéna nenalezena"
-                        );
+                    Debug.LogWarning
+                    (
+                    "Scéna nenalezena"
+                    );
                 }
 
 
@@ -77,8 +83,10 @@ namespace LP.FDG.Player
             }
             else if (EnemyUnitsList == 0)
             {
-                Debug.LogWarning("Victory"
-                    );
+                Debug.LogWarning
+                (
+                "Victory"
+                );
                 try
                 {
                     SceneManager.LoadScene(WinScene);
@@ -86,8 +94,10 @@ namespace LP.FDG.Player
                 catch (System.Exception)
                 {
 
-                    Debug.LogWarning("Scéna nenalezena"
-                        );
+                    Debug.LogWarning
+                    (
+                    "Scéna nenalezena"
+                    );
                 }
                 
             }
@@ -100,36 +110,51 @@ namespace LP.FDG.Player
                 foreach (Transform tf in child)
                 {
                     string name = child.name.Substring(0, child.name.Length - 1).ToLower();
-                    Debug.Log("var stats = Units.UnitHandler.instance.GetBasicUnitStats(unitName);"
-                        );
+                    Debug.Log
+                    (
+                    "var stats = Units.UnitHandler.instance.GetBasicUnitStats(unitName);"
+                    );
 
                     if (type == playerUnits)
                     {
                         Units.Player.PlayerUnit pU = tf.GetComponent<Units.Player.PlayerUnit>();
                         pU.baseStats = Units.UnitHandler.instance.GetBasicUnitStats(name);
-                        Debug.Log("přidány statisky pro hráčovy jednotky"
-                            );
+                        Debug.Log
+                        (
+                        "přidány statisky pro hráčovy jednotky"
+                        );
                     }
                     else if (type == enemyUnits)
                     {
-                        Debug.Log("set enemy stats");
+                        Debug.Log
+                        (
+                        "set enemy stats"
+                        );
                         Units.Enemy.EnemyUnit eU = tf.GetComponent<Units.Enemy.EnemyUnit>();
                         eU.baseStats = Units.UnitHandler.instance.GetBasicUnitStats(name);
-                        Debug.Log("přidány statisky pro nepřáteské jednotky"
-                            );
+                        Debug.Log
+                        (
+                        "přidány statisky pro nepřáteské jednotky"
+                        );
                     }
                     else if(type == playerBuildings)
                     {
                         Buildings.Player.PlayerBuilding pB = tf.GetComponent<Buildings.Player.PlayerBuilding>();
                         pB.baseStats = Buildings.BuildingHandler.instance.GetBasicBuildingStats(name);
-                        Debug.Log("přidány statisky pro hráčovy budovy"
-                            );
+                        Debug.Log
+                        (
+                        "přidány statisky pro hráčovy budovy"
+                        );
                     }
 
-                    Debug.Log("zde je možné přidává upgrade"
-                        );
-                    Debug.Log("zde je možné přidává statistiky vylepseni"
-                        );                    
+                    Debug.Log
+                    (
+                    "zde je možné přidává upgrade"
+                    );
+                    Debug.Log
+                    (
+                    "zde je možné přidává statistiky vylepseni"
+                    );                    
                 }
             }
         }
@@ -138,20 +163,26 @@ namespace LP.FDG.Player
             if (type == playerUnits)
             {
                 PlayerUnitsList = 0;
-                Debug.Log(PlayerUnitsList
-                    );
+                Debug.Log
+                (
+                PlayerUnitsList
+                );
             }
             else if (type == enemyUnits)
             {
                 EnemyUnitsList = 0;
-                Debug.Log(EnemyUnitsList
-                    );
+                Debug.Log
+                (
+                EnemyUnitsList
+                );
             }
             else if (type == playerBuildings)
             {
                 PlayerBuildingsList = 0;
-                Debug.Log(PlayerBuildingsList
-                    );
+                Debug.Log
+                (
+                PlayerBuildingsList
+                );
             }
             foreach (Transform child in type)
             {
@@ -161,21 +192,26 @@ namespace LP.FDG.Player
                     if (type == playerUnits)
                     {
                         PlayerUnitsList += 1;
-                        Debug.Log(PlayerUnitsList
-                            );
+                        Debug.Log
+                        (
+                        PlayerUnitsList
+                        );
                     }
                     else if (type == enemyUnits)
                     {
                         EnemyUnitsList += 1;
-                        Debug.Log(EnemyUnitsList
-                            );
+                        Debug.Log
+                        (
+                        EnemyUnitsList
+                        );
                     }
-                    else if (type == playerBuildings
-                        )
+                    else if (type == playerBuildings)
                     {
                         PlayerBuildingsList += 1;
-                        Debug.Log(PlayerBuildingsList
-                            );
+                        Debug.Log
+                        (
+                        PlayerBuildingsList
+                        );
                     }
                 }
             }
