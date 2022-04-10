@@ -133,7 +133,8 @@ namespace LP.FDG.Units.Player
             if(checkClick)
             {
                 yield return new WaitForSeconds(5f);// yield return new WaitForSeconds(x = delka toho resetu cooldanu pro utok)
-                Debug.Log("// yield return new WaitForSeconds(x = delka toho resetu cooldanu pro utok)");
+                Debug.Log("// yield return new WaitForSeconds(x = delka toho resetu cooldanu pro utok)"
+                    );
                 checkClick = false;
             }
         }

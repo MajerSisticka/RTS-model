@@ -49,7 +49,8 @@ namespace LP.FDG.Units
                 }
                 catch (Exception)
                 {
-                    Debug.Log("No player Unit. Trying Enemy Unit...");
+                    Debug.Log("No player Unit. Trying Enemy Unit..."
+                        );
                     try
                     {
                         maxHealth = gameObject.GetComponentInParent<Enemy.EnemyUnit>().baseStats.health;
@@ -58,7 +59,8 @@ namespace LP.FDG.Units
                     }
                     catch (Exception)
                     {
-                        Debug.Log("No Unit Scripts found!");
+                        Debug.Log("No Unit Scripts found!"
+                            );
                     }
                 }
 
@@ -99,7 +101,8 @@ namespace LP.FDG.Units
             catch (Exception)
             {
 
-                Debug.LogWarning("chyba zvuku");
+                Debug.LogWarning("chyba zvuku"
+                    );
             }
             
         }

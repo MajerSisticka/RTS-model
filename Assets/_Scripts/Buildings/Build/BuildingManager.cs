@@ -54,7 +54,8 @@ namespace LP.FDG.Buildings.build
                         // jeden typ budovy
                         //Instantiate(prefab, raycastHit.point, Quaternion.identity);
                         // všechny typy
-                        Debug.LogWarning("stavíme budovu" + activeBuildingType.buildingPrefab);
+                        Debug.LogWarning("stavíme budovu" + activeBuildingType.buildingPrefab
+                            );
                         //stavìní budovy
                         Instantiate(activeBuildingType.buildingPrefab, raycastHit.point, Quaternion.identity);
                         try
@@ -79,8 +80,10 @@ namespace LP.FDG.Buildings.build
                             Player.PlayerBuilding basicBuilding = activeBuildingType.buildingPrefab.AddComponent<Buildings.Player.PlayerBuilding>();
                             basicBuilding.transform.SetParent(GameObject.Find("Player " + basicBuilding.buildingType.type.ToString() + "s").transform);
 
-                            Debug.Log("Units.Player.PlayerUnit pu = spawnedObject.GetComponent<Units.Player.PlayerUnit>();");
-                            Debug.Log("pu.transform.SetParent(GameObject.Find(Player  + pu.unitType.type.ToString() + s).transform);");
+                            Debug.Log("Units.Player.PlayerUnit pu = spawnedObject.GetComponent<Units.Player.PlayerUnit>();"
+                                );
+                            Debug.Log("pu.transform.SetParent(GameObject.Find(Player  + pu.unitType.type.ToString() + s).transform);"
+                                );
                         }
 
                     }

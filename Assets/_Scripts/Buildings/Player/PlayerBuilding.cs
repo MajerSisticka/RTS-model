@@ -15,7 +15,8 @@ namespace LP.FDG.Buildings.Player
         private void Start()
         {
             baseStats = buildingType.baseStats;
-            Debug.Log("//statDisplay.SetStatDisplayBasicBuilding(baseStats, true);");
+            Debug.Log("//statDisplay.SetStatDisplayBasicBuilding(baseStats, true);"
+                );
         }
     }
 }
